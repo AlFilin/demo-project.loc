@@ -3,14 +3,7 @@ title = "Demonstration"
 url = "/"
 layout = "home"
 meta_title = "Welcome"
-
-[collection blog]
-handle = "Blog\Post"
-
-[resources]
-less[] = "pages/index.less"
 ==
-{% set latestPosts = blog.limit(3).get %}
 <section class="w-[1200px] m-0 m-auto text-[#213f50] font-sans">
   <div class="relative w-[1140px] m-0 m-auto">
     <div class="absolute w-[450px] py-16">
