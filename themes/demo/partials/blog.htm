@@ -1,0 +1,30 @@
+{% set testVar = 'Привет' %}
+<section class="max-w-site m-0 m-auto text-dark-blue font-sans">
+  <div class="max-w-container m-0 m-auto">
+    <div class="grid grid-cols-2 relative">
+      <div class="w-[450px] py-16">
+        <h1 class="text-5xl mb-7 leading-normal font-medium w-[430px]">The
+        <span class="text-orange bg-light-yellow">Laravel-Based</span>
+          CMS Engineered For Simplisity</h1>
+        <div class="mb-6">
+          <button type="button" href="#" class="py-2 px-4 rounded-3xl bg-indigo-600 text-white cursor-pointer">Get a Free License</button>
+          <span class="px-3">or</span>
+          <a class="text-blue underline cursor-pointer" href="#" title="Watch the intro">Watch the intro</a>
+        </div>
+        <p class="text-xl leading-loose">Experience the simplicity of October CMS, an award-winning self-hosted CMS based on Laravel PHP framework.</p>
+      </div>
+      <div>
+        <img class="absolute left-0" src="/themes/demo/assets/images/header-illustration-reduced@2x.webp" alt="picture">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="max-w-site m-0 m-auto text-dark-blue font-sans">
+  <div class="max-w-container m-0 m-auto">
+    {{ testVar }}
+    {{ "now"|date("d,m,Y") }}
+    {{ d(this.page) }}
+    {{ d(this.page.attributes.meta_title) }}
+    {{ d(this.page.attributes.meta_description) }}
+  </div>
+</section>
