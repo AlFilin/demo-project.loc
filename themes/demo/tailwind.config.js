@@ -23,6 +23,7 @@ module.exports = {
             'bright-red': '#E34444',
             'blog1-bg': '#CA6100',
             'button': '#D89E78',
+            'dull-grey': '#727070',
             'light-orange': 'rgba(202, 97, 0, 0.40)',
         },
         fontFamily: {
@@ -33,6 +34,9 @@ module.exports = {
         },
         boxShadow: {
             'card': '0px 11px 24px 0px rgba(0, 0, 0, 0.10), 0px 43px 43px 0px rgba(0, 0, 0, 0.09), 0px 97px 58px 0px rgba(0, 0, 0, 0.05), 0px 172px 69px 0px rgba(0, 0, 0, 0.01), 0px 268px 75px 0px rgba(0, 0, 0, 0.00)',
+        },
+        backgroundSize: {
+            '300%': '300%',
         }
     },
   },
