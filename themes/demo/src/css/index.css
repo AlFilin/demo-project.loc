@@ -1,5 +1,7 @@
 @import './font.css';
 @import './search.css';
+@import './burger.css';
+@import './blog-list.css';
 
 @tailwind base;
 @tailwind components;
