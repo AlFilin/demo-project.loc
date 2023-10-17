@@ -25,14 +25,26 @@ menuLinks.forEach(function(el){
   })
 })
 
-const searchOpen = document.querySelector('.blog-nav__btn');
-const search =  document.querySelector('.blog-nav');
-const searchClose = document.querySelector('.blog-nav__close');
+const searchOpen = document.querySelector('.search-btn');
+const search = document.querySelector('.search');
+const searchClose = document.querySelector('body');
 
 searchOpen.addEventListener('click', () => {
-  search.classList.add('blog-nav--open');
+  search.classList.add('search--open');
 });
 
 searchClose.addEventListener('click', () => {
-  search.classList.remove('blog-nav--open');
+  search.classList.remove('search--open');
+});
+
+const listOpen = document.querySelector('.blog-nav__btn');
+const list =  document.querySelector('.blog-nav');
+const listClose = document.querySelector('.blog-nav__close');
+
+listOpen.addEventListener('click', () => {
+  list.classList.add('blog-nav--open');
+});
+
+listClose.addEventListener('click', () => {
+  list.classList.remove('blog-nav--open');
 });
