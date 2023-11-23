@@ -1,0 +1,109 @@
+<section class="max-w-site m-0 m-auto" id="corzina">
+  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20">
+    <div class="flex items-center mb-20">
+      <h2 class="ml-5 mr-16 text-5xl font-inter font-medium">Корзина</h2>
+      <span class="h-2 bg-brown w-full"></span>
+    </div>
+    <div class="flex mb-20">
+      <div class="mr-32">
+        <p class="ml-8 mb-16 text-xl font-light text-light-grey-blue">В корзине 2 предмета</p>
+        <div class="flex justify-between pb-6">
+          <div class="flex">
+            <img src="/themes/demo/assets/images/corzina1.png" alt="товар">
+            <div>
+              <h2 class="text-2xl font-light text-blue mb-4">Стул красивый</h2>
+              <div class="flex mb-7">
+                <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
+                <p class="text-xl font-light text-blue">Белый</p>
+              </div>
+              <form class="flex mb-2.5" action="" method="post">
+                <div class="quantity mr-6">
+                  <button class="quantity-btn quantity-btn-minus ml-4">-</button>
+                  <input type="text" class="quantity-input" value="1" readonly>
+                  <button class="quantity-btn quantity-btn-plus mr-4">+</button>
+                </div>
+                <button class="text-base font-light text-Imperial-Red">Удалить</button>
+              </form>
+            </div>
+          </div>
+          <p class="text-xl font-light text-blue mr-16">4429 рублей</p>
+        </div>
+        <span class="block h-0.5 w-[820px] bg-French-Grey ml-20 mb-6"></span>
+        <div class="flex justify-between">
+          <div class="flex">
+            <img src="/themes/demo/assets/images/corzina2.png" alt="товар">
+            <div>
+              <h2 class="text-2xl font-light text-blue mb-4">Стул зеленый</h2>
+              <div class="flex mb-7">
+                <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
+                <p class="text-xl font-light text-blue">Зеленый</p>
+              </div>
+              <form class="flex mb-2.5" action="" method="post">
+                <div class="quantity mr-6">
+                  <button class="quantity-btn quantity-btn-minus ml-4">-</button>
+                  <input type="text" class="quantity-input" value="1" readonly>
+                  <button class="quantity-btn quantity-btn-plus mr-4">+</button>
+                </div>
+                <button class="text-base font-light text-Imperial-Red">Удалить</button>
+              </form>
+            </div>
+          </div>
+          <p class="text-xl font-light text-blue mr-16">5222 рубля</p>
+        </div>
+        <a href="/catalog">
+          <button class="mt-16 text-xl text-white bg-brown-header p-5 border border-brown ml-8"><span
+              class="text-brown text-2xl">%</span> 6% кешбек рублями при заказе от <span class="font-bold">30.000
+              рублей</span></button>
+        </a>
+      </div>
+      <div class="text-xl text-blue font-light">
+        <ul class="w-96 p-7 bg-white border-2 border-French-Grey">
+          <h2 class="mb-7 font-bold">Стоимость:</h2>
+          <li class="flex justify-between items-center mb-6">
+            <p>Стоимость покупок:</p>
+            <p>319.98 рублей</p>
+          </li>
+          <li class="flex justify-between items-center mb-6">
+            <p>Скидка</p>
+            <p>423 рубля</p>
+          </li>
+          <li class="flex justify-between items-center pb-7 mb-7 border-b border-b-French-Grey">
+            <p>Доставка</p>
+            <p class="text-brown-header font-normal">Бесплатно</p>
+          </li>
+          <li class="flex justify-between items-center mb-6">
+            <p>Итоговая стоимость</p>
+            <p class="font-normal">28812 рублей</p>
+          </li>
+          <button
+            class="text-white py-3 w-full bg-button border rounded-md font-light text-2xl hover:border-brown hover:underline hover:duration-300">Оформить
+            заказ</button>
+        </ul>
+      </div>
+    </div>
+    <form class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12" method="post">
+      <input type="text" name="name"
+        class="mr-7 border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        placeholder="Имя" required
+        style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+      <input type="text" name="name"
+        class="border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        placeholder="Отчество" required
+        style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+      <input type="text" name="name"
+        class="mr-7 border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        placeholder="Фамилия" required
+        style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+      <input type="text" name="name"
+        class="border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        placeholder="Адрес" required
+        style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
+      <textarea name="text"
+        class="col-span-2 h-44 resize-none border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        placeholder="Комментарий к заказу"></textarea>
+    </form>
+  </div>
+</section>

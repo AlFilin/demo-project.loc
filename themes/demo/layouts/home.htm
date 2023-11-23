@@ -11,7 +11,9 @@ description = "Default layout"
       {% partial 'site/header' %}
     </header>
     <section id="layout-content">
-      {% page %}
+        <div class="max-w-site m-0 m-auto bg-body">
+            {% page %}
+        </div>
     </section>
   <footer id="layout-footer">
     {% partial 'site/footer' %}

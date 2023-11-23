@@ -1,7 +1,9 @@
 @import './font.css';
-@import './search.css';
-@import './burger.css';
+@import './header.css';
 @import './blog-list.css';
+@import './faq.css';
+@import './corzina.css';
+@import './product-card.css';
 
 @tailwind base;
 @tailwind components;

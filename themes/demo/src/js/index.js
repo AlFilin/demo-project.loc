@@ -1,3 +1,6 @@
+
+// burger
+
 let burger = document.querySelector('.menu-burger__header');
 let menu = document.querySelector('.header-list');
 let menuLinks = menu.querySelectorAll('.header-list__item');
@@ -21,9 +24,66 @@ menuLinks.forEach(function(el){
     menu.classList.remove('header-list--active');
 
     document.body.classList.remove('stop-scroll');
-
   })
-})
+});
+
+// FAQ
+
+var accordionItems = document.getElementsByClassName('accordion-item');
+
+for (var i = 0; i < accordionItems.length; i++) {
+  accordionItems[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var accordionContent = this.querySelector('.accordion-content');
+    accordionContent.style.display = accordionContent.style.display === 'block' ? 'none' : 'block';
+  });
+};
+
+// popup
+
+const btncontact = document.querySelector('.btnform');
+const formcontact = document.querySelector('#formheader');
+const popup = document.querySelector('.popup');
+const formclose = document.querySelector('.formclose');
+
+
+btncontact.addEventListener('click', () => {
+    formcontact.classList.add('open');
+    popup.classList.add('popup_open');
+});
+formclose.addEventListener('click', () => {
+    formcontact.classList.remove('open');
+    popup.classList.remove('popup_open');
+});
+
+// swiper
+
+const swiperbanner = new Swiper('.swiper-foto-prod', {
+    slidesPerView: 1,
+    loop: true,
+    spaseBetween: 30,
+    navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+const swipercard = new Swiper('.swiper-card', {
+    slidesPerView: 5,
+    loop: true,
+    spaseBetween: 30,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.slider__next-card',
+        prevEl: '.slider__prev-card'
+    },
+});
+
+// header
 
 const searchOpen = document.querySelector('.search-btn');
 const search = document.querySelector('.search');
@@ -48,3 +108,24 @@ listOpen.addEventListener('click', () => {
 listClose.addEventListener('click', () => {
   list.classList.remove('blog-nav--open');
 });
+
+// corzina
+
+let quantityInput = document.querySelector('.quantity-input');
+let minusBtn = document.querySelector('.quantity-btn-minus');
+let plusBtn = document.querySelector('.quantity-btn-plus');
+
+minusBtn.addEventListener('click', decreaseQuantity);
+plusBtn.addEventListener('click', increaseQuantity);
+
+function decreaseQuantity() {
+  let currentValue = parseInt(quantityInput.value);
+  if (currentValue > 1) {
+    quantityInput.value = currentValue - 1;
+  }
+};
+
+function increaseQuantity() {
+  let currentValue = parseInt(quantityInput.value);
+  quantityInput.value = currentValue + 1;
+};
