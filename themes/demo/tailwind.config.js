@@ -20,7 +20,7 @@ module.exports = {
             '1.5lg': '1190px',
             'xl': '1282px',
             '1.3xl': '1380px',
-            '1.5xl': '1430px',
+            '1.5xl': '1540px',
             '2xl': '1645px',
         },
         extend: {

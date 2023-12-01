@@ -20,12 +20,66 @@ emails_date_format = "Y-m-d"
 ==
 <section class="max-w-full m-0 m-auto bg-brown-header">
   <div class="max-w-container m-0 m-auto">
-    <div class="max-w-block m-0 m-auto font-futura text-2xl mx-5">
-      <div class="relative flex items-center justify-between py-10 max-xl:mb-5 max-xl:py-5">
-        <div class="menu-burger__header hidden max-xl:block">
-          <span></span>
+    <div class="max-w-block m-0 m-auto font-futura text-2xl mx-5 max-1.5lg:text-xl">
+      <div class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
+        <div class="burder-logo">
+          <div class="menu-burger__header max-lg:self-center">
+            <span></span>
+          </div>
+          <img class="hidden max-mdtwo:block max-md:justify-self-start max-sm:hidden"
+            src="/themes/demo/assets/images/logo.svg" alt="Логотип компании СевМебель">
+          <img class="hidden max-sm:block w-14 ml-5" src="/themes/demo/assets/images/logosmall.png" alt="">
         </div>
-        <div class="flex flex-col justify-between text-center h-[692px] top-0 right-[417px] absolute bg-brown max-2xl:-left-5 max-2xl:right-auto">
+        <ul class="header-list flex max-w-[750px]">
+          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+            <a href="/">Главная</a>
+          </li>
+          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+            <a href="/catalog#catalog">Каталог</a>
+          </li>
+          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+            <a href="">Мебель на заказ</a>
+          </li>
+          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+            <a href="/kontakts#kontakts">Контакты</a>
+          </li>
+          <li class="header-list__item hover:text-white hover:duration-300">
+            <a href="/faq#faq">FAQ</a>
+          </li>
+        </ul>
+        <div class="">
+          <div class="flex max-2xl:mr-64 max-mdtwo:mr-0 max-mdtwo:justify-end">
+            <div class="search mr-12 max-1.5lg:mr-5 max-mdtwo:mr-4">
+              <a class="search-btn p-2.5 bg-white rounded-full shadow-xl" href="#" title="search">
+                <img class="max-w-[30px] max-md:max-w-[20px]" src="/themes/demo/assets/images/search.svg" alt="search">
+              </a>
+              <input type="text" class="search-txt text-2xl" placeholder="Поиск">
+            </div>
+            <a href="/corzina#corzina"
+              class="max-w-[50px] p-2.5 max-mdtwo:mr-4 max-md:max-w-[40px] max-md:max-h-[40px] bg-white rounded-full shadow-xl border border-brown-header hover:border-brown hover:duration-300">
+              <img class="max-w-[30px] max-md:max-w-[20px] max-md:max-h-[20px]"
+                src="/themes/demo/assets/images/basket.svg" alt="basket">
+            </a>
+            <div class="contact-nav hidden max-mdtwo:flex relative items-center max-md:items-start">
+              <div class="flex relative z-30">
+                <img class="max-md:max-w-[40px]" src="/themes/demo/assets/images/Icon_ring2.png" alt="">
+              </div>
+              <ul class="contact-nav__list min-w-max hidden rounded-xl mr-5">
+                <li class="contact-nav__item">
+                  <a class="hover:underline hover:duration-500 max-md:text-lg" href="tel:+79385277708">+7 938
+                    527-77-08</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden max-mdtwo:flex justify-end mt-4">
+            <button
+              class="btnform py-2 px-6 max-md:text-lg max-md:px-4 border border-brown rounded-xl hover:text-white hover:bg-brown hover:duration-500">Обратная
+              связь</button>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-between text-center h-[692px] top-0 right-[417px] absolute bg-brown max-2xl:-right-5 max-mdtwo:hidden">
           <a href="/" class="mt-7 border-y border-y-brown hover:border-y-brown-header hover:duration-500">
             <img src="/themes/demo/assets/images/logo.svg" alt="Логотип компании СевМебель">
           </a>
@@ -84,60 +138,40 @@ emails_date_format = "Y-m-d"
             </div>
           </div>
         </div>
-        <ul class="header-list flex max-w-[750px] max">
-          <li class="header-list__item pr-14 hover:text-white hover:duration-300">
-            <a href="/">Главная</a>
-          </li>
-          <li class="header-list__item pr-14 hover:text-white hover:duration-300">
-            <a href="/catalog#catalog">Каталог</a>
-          </li>
-          <li class="header-list__item pr-14 hover:text-white hover:duration-300">
-            <a href="">Мебель на заказ</a>
-          </li>
-          <li class="header-list__item pr-14 hover:text-white hover:duration-300">
-            <a href="/kontakts#kontakts">Контакты</a>
-          </li>
-          <li class="header-list__item hover:text-white hover:duration-300">
-            <a href="/faq#faq">FAQ</a>
-          </li>
-        </ul>
-        <div class="flex">
-          <div class="search mr-12">
-            <a class="search-btn p-2.5 bg-white rounded-full shadow-xl" href="#" title="search">
-              <img class="w-[30px] max-[500px]:max-w-[40px]" src="/themes/demo/assets/images/search.svg" alt="search">
-            </a>
-            <input type="text" class="search-txt text-2xl" placeholder="Поиск">
-          </div>
-          <a href="/corzina#corzina"
-            class="p-2.5 bg-white rounded-full shadow-xl border border-brown-header hover:border-brown hover:duration-300">
-            <img class="w-[30px] max-[500px]:max-w-[40px]" src="/themes/demo/assets/images/basket.svg" alt="basket">
-          </a>
-        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="max-w-site m-0 m-auto" style="background-image: url(/themes/demo/assets/images/fonheader.png);">
+<section class="max-w-site m-0 m-auto max-lg:bg-cover" style="background-image: url(/themes/demo/assets/images/fonheader.png);">
   <div class="fonheader m-0 m-auto font-futura text-2xl"
     style="background-image: url(/themes/demo/assets/images/fonright.png);">
-    <div class="max-w-container m-0 m-auto">
-      <div class="max-w-block h-[562px] m-0 m-auto mx-5">
-        <div class="flex justify-between max-xl:grid-cols-1">
-          <div class="relative text-center mt-24 pt-14 px-24">
-            <img class="absolute top-0 right-0" src="/themes/demo/assets/images/Рамкаверх.png" alt="рамка">
-            <h1 class="text-brown text-9xl mb-4 font-title max-2xl:text-6xl">
+    <div class="max-w-container m-0 m-auto max-1.5xl:mr-64 max-mdtwo:mr-0">
+      <div class="max-w-block h-[562px] m-0 m-auto mx-5 max-2xl:flex items-center">
+        <div
+          class="flex justify-between max-2xl:w-full max-2xl:grid max-2xl:grid-cols-[880px_auto] max-1.5xl:items-center max-1.5xl:grid-cols-1">
+          <div
+            class="relative text-center mt-24 pt-14 px-24 max-2xl:mt-0 max-1.5xl:w-max max-1.5xl:justify-self-center max-1.5xl:mb-20 max-md:px-10 max-smtwo:px-5 max-sm:px-0 max-minitwo:px-10">
+            <img class="absolute top-0 right-0 max-md:w-40 max-smtwo:w-32"
+              src="/themes/demo/assets/images/Рамкаверх.png" alt="рамка">
+            <h1
+              class="text-brown text-9xl mb-4 font-title max-2xl:text-7xl max-1.5lg:text-6xl max-md:text-5xl max-smtwo:text-4xl">
               ЛОФТ МЕБЕЛЬ</h1>
-            <p class="text-dull-grey text-3xl mb-3 font-morice tracking-[0.35em] ">
-              УЮТ И СТИЛЬ В КАЖДОЙ ДЕТАЛИ!</p>
-            <p class="pb-7 text-4xl font-lobster -rotate-3 tracking-[0.2em] max-xl:mb-3">
+            <p
+              class="text-dull-grey text-3xl mb-3 font-morice tracking-[0.35em] max-1.5lg:text-2xl max-md:text-xl max-smtwo:text-lg">
+              УЮТ И СТИЛЬ <br class="hidden max-minitwo:block"> В КАЖДОЙ ДЕТАЛИ!</p>
+            <p
+              class="pb-7 text-4xl font-lobster -rotate-3 tracking-[0.2em] max-xl:mb-3 max-1.5lg:text-3xl max-md:text-2xl max-smtwo:text-lg">
               <span class="text-bright-red">Р</span>учная работа
             </p>
-            <img class="absolute left-0 -bottom-4" src="/themes/demo/assets/images/Рамкавниз.png" alt="рамка">
+            <img class="absolute left-0 -bottom-4 max-md:w-40 max-smtwo:w-32"
+              src="/themes/demo/assets/images/Рамкавниз.png" alt="рамка">
           </div>
-          <div class="max-w-[550px]">
-            <h2 class="mt-12 mb-10 font-bold text-3xl">Мебель на заказ</h2>
-            <div class="max-w-[373px] h-[186px] flex flex-col justify-between">
-              <p class="">Подберем решение для Вашего офиса, квартиры и дома.</p>
+          <div
+            class="max-w-[550px] max-2xl:mr-56 max-2xl:justify-self-end max-1.5xl:mr-0 max-1.5xl:justify-self-start max-1.5xl:ml-20 max-1.5xl:max-w-xl max-xl:ml-10 max-smtwo:ml-7 max-sm:ml-5 max-mini:ml-1">
+            <h2 class="mt-12 mb-10 font-bold text-3xl max-2xl:mt-0 max-smtwo:text-2xl">Мебель на заказ</h2>
+            <div
+              class="w-[373px] h-[186px] flex flex-col justify-between max-1.5xl:w-full max-1.5xl:h-auto max-smtwo:text-lg">
+              <p class="max-1.5xl:mr-10">Подберем решение для Вашего офиса, квартиры и дома.</p>
               <p>Учтём все пожелания и выполним заказ в срок 30
                 календарных дней с гарантией 12 месяцев</p>
             </div>

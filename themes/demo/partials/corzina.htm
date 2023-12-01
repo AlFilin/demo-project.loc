@@ -1,23 +1,23 @@
 <section class="max-w-site m-0 m-auto" id="corzina">
-  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20">
-    <div class="flex items-center mb-20">
-      <h2 class="ml-5 mr-16 text-5xl font-inter font-medium">Корзина</h2>
-      <span class="h-2 bg-brown w-full"></span>
+  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20 mx-5 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10">
+    <div class="flex items-center mb-20 max-mdtwo:flex-col max-mdtwo:items-start">
+      <h2 class="ml-5 mr-16 text-5xl font-inter font-medium max-xl:text-4xl">Корзина</h2>
+      <span class="h-2 bg-brown w-full max-mdtwo:h-1"></span>
     </div>
-    <div class="flex mb-20">
-      <div class="mr-32">
+    <div class="grid grid-cols-[auto_385px] mb-20 max-lg:grid-cols-1">
+      <div class="mr-32 max-1.3xl:mr-10 max-lg:mr-0 max-lg:mb-10">
         <p class="ml-8 mb-16 text-xl font-light text-light-grey-blue">В корзине 2 предмета</p>
-        <div class="flex justify-between pb-6">
+        <div class="flex justify-between pb-6 max-smtwo:flex-col-reverse">
           <div class="flex">
-            <img src="/themes/demo/assets/images/corzina1.png" alt="товар">
+            <img class="max-h-[150px]" src="/themes/demo/assets/images/corzina1.png" alt="товар">
             <div>
-              <h2 class="text-2xl font-light text-blue mb-4">Стул красивый</h2>
-              <div class="flex mb-7">
+              <h2 class="text-2xl font-light text-blue mb-3">Стул красивый</h2>
+              <div class="flex mb-7 max-minitwo:mb-3">
                 <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
                 <p class="text-xl font-light text-blue">Белый</p>
               </div>
-              <form class="flex mb-2.5" action="" method="post">
-                <div class="quantity mr-6">
+              <form class="flex mb-2.5 max-minitwo:flex-col" action="" method="post">
+                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0">
                   <button class="quantity-btn quantity-btn-minus ml-4">-</button>
                   <input type="text" class="quantity-input" value="1" readonly>
                   <button class="quantity-btn quantity-btn-plus mr-4">+</button>
@@ -26,20 +26,20 @@
               </form>
             </div>
           </div>
-          <p class="text-xl font-light text-blue mr-16">4429 рублей</p>
+          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5">4429 рублей</p>
         </div>
-        <span class="block h-0.5 w-[820px] bg-French-Grey ml-20 mb-6"></span>
-        <div class="flex justify-between">
+        <span class="block h-0.5 max-w-[820px] bg-French-Grey ml-20 mb-6"></span>
+        <div class="flex justify-between max-smtwo:flex-col-reverse">
           <div class="flex">
-            <img src="/themes/demo/assets/images/corzina2.png" alt="товар">
+            <img class="max-h-[150px]" src="/themes/demo/assets/images/corzina2.png" alt="товар">
             <div>
-              <h2 class="text-2xl font-light text-blue mb-4">Стул зеленый</h2>
-              <div class="flex mb-7">
+              <h2 class="text-2xl font-light text-blue mb-3">Стул зеленый</h2>
+              <div class="flex mb-7 max-minitwo:mb-3">
                 <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
                 <p class="text-xl font-light text-blue">Зеленый</p>
               </div>
-              <form class="flex mb-2.5" action="" method="post">
-                <div class="quantity mr-6">
+              <form class="flex mb-2.5 max-minitwo:flex-col" action="" method="post">
+                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0">
                   <button class="quantity-btn quantity-btn-minus ml-4">-</button>
                   <input type="text" class="quantity-input" value="1" readonly>
                   <button class="quantity-btn quantity-btn-plus mr-4">+</button>
@@ -48,61 +48,68 @@
               </form>
             </div>
           </div>
-          <p class="text-xl font-light text-blue mr-16">5222 рубля</p>
+          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5">5222 рубля</p>
         </div>
-        <a href="/catalog">
+        <a href="/catalog#catalog" class="max-lg:hidden">
           <button class="mt-16 text-xl text-white bg-brown-header p-5 border border-brown ml-8"><span
               class="text-brown text-2xl">%</span> 6% кешбек рублями при заказе от <span class="font-bold">30.000
               рублей</span></button>
         </a>
       </div>
-      <div class="text-xl text-blue font-light">
-        <ul class="w-96 p-7 bg-white border-2 border-French-Grey">
+      <div class="text-xl text-blue font-light max-lg:grid max-lg:grid-cols-2 max-md:grid-cols-1">
+        <ul class="w-96 p-7 bg-white border-2 border-French-Grey max-lg:w-full">
           <h2 class="mb-7 font-bold">Стоимость:</h2>
-          <li class="flex justify-between items-center mb-6">
+          <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
             <p>Стоимость покупок:</p>
             <p>319.98 рублей</p>
           </li>
-          <li class="flex justify-between items-center mb-6">
+          <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
             <p>Скидка</p>
             <p>423 рубля</p>
           </li>
-          <li class="flex justify-between items-center pb-7 mb-7 border-b border-b-French-Grey">
+          <li class="flex justify-between items-center max-minitwo:flex-col max-minitwo:items-start pb-7 mb-7 border-b border-b-French-Grey">
             <p>Доставка</p>
             <p class="text-brown-header font-normal">Бесплатно</p>
           </li>
-          <li class="flex justify-between items-center mb-6">
+          <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
             <p>Итоговая стоимость</p>
             <p class="font-normal">28812 рублей</p>
           </li>
+          <div class="flex justify-end">
           <button
-            class="text-white py-3 w-full bg-button border rounded-md font-light text-2xl hover:border-brown hover:underline hover:duration-300">Оформить
+            class="text-white py-3 w-full text-2xl max-lg:w-2/3 max-sm:text-xl bg-button border rounded-md font-light hover:border-brown hover:underline hover:duration-300">Оформить
             заказ</button>
+          </div>
         </ul>
+        <a href="/catalog" class="hidden max-lg:block">
+          <button class="ml-8 max-md:ml-0 max-md:w-full text-xl text-white bg-brown-header p-5 border border-brown"><span
+              class="text-brown text-2xl">% </span> 6% кешбек рублями при заказе от <span class="font-bold">30.000
+              рублей</span></button>
+        </a>
       </div>
     </div>
-    <form class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12" method="post">
+    <form class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12 max-lg:ml-0 max-smtwo:grid-cols-1 max-smtwo:gap-5" method="post">
       <input type="text" name="name"
-        class="mr-7 border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Имя" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
       <input type="text" name="name"
-        class="border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Отчество" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
       <input type="text" name="name"
-        class="mr-7 border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Фамилия" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
       <input type="text" name="name"
-        class="border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Адрес" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
       <textarea name="text"
-        class="col-span-2 h-44 resize-none border text-2xl border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+        class="col-span-2 h-44 max-smtwo:col-span-1 resize-none border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Комментарий к заказу"></textarea>
     </form>
   </div>

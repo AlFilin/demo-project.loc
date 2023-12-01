@@ -81,9 +81,39 @@ const swipercard = new Swiper('.swiper-card', {
         nextEl: '.slider__next-card',
         prevEl: '.slider__prev-card'
     },
+    breakpoints: {
+        360: {
+            slidesPerView: 1,
+            spaseBetween: 0,
+        },
+        480: {
+            slidesPerView: 2,
+            spaseBetween: 30,
+        },
+        770: {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaseBetween: 30,
+        },
+        1280: {
+            slidesPerView: 4,
+            spaseBetween: 30,
+        }
+    }
 });
 
 // header
+
+var tele = document.querySelector('.contact-nav');
+tele.addEventListener('mouseover', function () {
+    var telemenu = document.querySelector('.contact-nav__list');
+    telemenu.style.display = 'block';
+});
+
+tele.addEventListener('mouseout', function () {
+    var telemenu = document.querySelector('.contact-nav__list');
+    telemenu.style.display = 'none';
+});
 
 const searchOpen = document.querySelector('.search-btn');
 const search = document.querySelector('.search');
@@ -109,6 +139,19 @@ listClose.addEventListener('click', () => {
   list.classList.remove('blog-nav--open');
 });
 
+// card-prod
+
+var card = document.querySelector('.card-form');
+card.addEventListener('mouseover', function () {
+    var cardmenu = document.querySelector('.card-form__list');
+    cardmenu.style.display = 'block';
+});
+
+card.addEventListener('mouseout', function () {
+    var cardmenu = document.querySelector('.card-form__list');
+    cardmenu.style.display = 'none';
+});
+
 // corzina
 
 let quantityInput = document.querySelector('.quantity-input');
@@ -129,3 +172,4 @@ function increaseQuantity() {
   let currentValue = parseInt(quantityInput.value);
   quantityInput.value = currentValue + 1;
 };
+
