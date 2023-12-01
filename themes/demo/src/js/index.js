@@ -1,4 +1,4 @@
-
+import './lazyload.js';
 // burger
 
 let burger = document.querySelector('.menu-burger__header');

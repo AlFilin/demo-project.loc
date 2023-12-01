@@ -1,0 +1,39 @@
+url = "/catalog/:slug?"
+layout = "home"
+title = "Каталог"
+meta_title = "Каталог"
+
+[ProductList]
+sorting = "new"
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 0
+smart_url_check = 1
+has_wildcard = 0
+skip_error = 0
+==
+<?php
+use lovata\shopaholic\models\Product;
+use lovata\shopaholic\models\Category;
+
+public function onAddToCart(){
+    $quantity = 1;
+    $productId = post('product_id');
+    $sessionCart = Session::get('cart', ['items' => array()]);
+if (isset($sessionCart['items'][$productId])) {
+$sessionCart['items'][$productId]['quantity'] += $quantity;
+}
+else
+{
+$product = Product::find($productId);
+$sessionCart['items'][$productId] = [
+'id'       => $productId,
+'quantity' => $quantity,
+];
+}
+}
+?>
+==
+
+{% ajaxPartial 'catalog' %}
