@@ -20,8 +20,9 @@ emails_date_format = "Y-m-d"
 ==
 <section class="max-w-full m-0 m-auto bg-brown-header">
   <div class="max-w-container m-0 m-auto">
-    <div class="max-w-block m-0 m-auto font-futura text-2xl mx-5 max-1.5lg:text-xl">
-      <div class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
+    <div class="max-w-block m-0 m-auto font-futura text-2xl mx-10 max-1.5lg:text-xl max-smtwo:mx-5">
+      <div
+        class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
         <div class="burder-logo">
           <div class="menu-burger__header max-lg:self-center">
             <span></span>
@@ -31,6 +32,8 @@ emails_date_format = "Y-m-d"
           <img class="hidden max-sm:block w-14 ml-5" src="/themes/demo/assets/images/logosmall.png" alt="">
         </div>
         <ul class="header-list flex max-w-[750px]">
+          <img class="hidden max-mdtwo:block max-md:justify-self-start w-40 mb-5"
+            src="/themes/demo/assets/images/logobrown2.png" alt="Логотип компании СевМебель">
           <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
             <a href="/">Главная</a>
           </li>
@@ -48,7 +51,7 @@ emails_date_format = "Y-m-d"
           </li>
         </ul>
         <div class="">
-          <div class="flex max-2xl:mr-64 max-mdtwo:mr-0 max-mdtwo:justify-end">
+          <div class="flex max-2xl:mr-56 max-mdtwo:mr-0 max-mdtwo:justify-end">
             <div class="search mr-12 max-1.5lg:mr-5 max-mdtwo:mr-4">
               <a class="search-btn p-2.5 bg-white rounded-full shadow-xl" href="#" title="search">
                 <img class="max-w-[30px] max-md:max-w-[20px]" src="/themes/demo/assets/images/search.svg" alt="search">
@@ -72,66 +75,63 @@ emails_date_format = "Y-m-d"
               </ul>
             </div>
           </div>
-          <div class="hidden max-mdtwo:flex justify-end mt-4">
-            <button
-              class="btnform py-2 px-6 max-md:text-lg max-md:px-4 border border-brown rounded-xl hover:text-white hover:bg-brown hover:duration-500">Обратная
-              связь</button>
-          </div>
-        </div>
-        <div
-          class="flex flex-col justify-between text-center h-[692px] top-0 right-[417px] absolute bg-brown max-2xl:-right-5 max-mdtwo:hidden">
-          <a href="/" class="mt-7 border-y border-y-brown hover:border-y-brown-header hover:duration-500">
-            <img src="/themes/demo/assets/images/logo.svg" alt="Логотип компании СевМебель">
-          </a>
-          <div class="flex flex-col mx-8 mb-16 text-white font-bold text-xl">
-            <a class="py-3 px-4 mb-8 border border-white hover:text-brown hover:bg-white hover:duration-500"
-              href="tel:+79385277708">+7 938
-              527-77-08</a>
-            <button
-              class="btnform py-3 px-6 border border-white hover:text-brown hover:bg-white hover:duration-500">Обратная
-              связь</button>
-            <div class="popup">
-              <div class="popup__container">
-                <div class="popup__wrapper">
-                  <div id="formheader">
-                    <form class="text-xl relative p-10 shadow-blok1 text-black" method="post"
-                      data-request="{{ genericForm }}::onFormSubmit">
-                      {{ form_token() }}
-                      <div id="{{ genericForm }}_forms_flash"></div>
-                      <button class="formclose absolute top-5 right-5">
-                        <img class="w-8" src="/themes/demo/assets/images/close.svg" alt="close">
-                      </button>
-                      <h2 class="text-4xl mb-5">Напишите нам</h2>
-                      <p class="mb-5 text-slate-600">Задавайте ваш вопрос в форме обратной связи, мы ответим в
-                        течении рабочего дня</p>
-                      <div class="mb-6">
-                        <input type="text" name="name"
-                          class="text-lg border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5 "
-                          placeholder="ФИО получателя" required>
-                      </div>
-                      <div class="mb-6">
-                        <input type="tel" name="tele"
-                          class="text-lg border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
-                          placeholder="Ваш телефон" required>
-                      </div>
-                      <div class="mb-6">
-                        <input type="email" name="email"
-                          class="text-lg border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
-                          placeholder="Ваш e-mail" required>
-                      </div>
-                      <div class="mb-10">
-                        <textarea name="text"
-                          class="text-lg border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
-                          placeholder="Напишите Ваше письмо" required></textarea>
-                      </div>
-                      <button type="submit" id="simpleContactSubmitButton"
-                        class="px-6 py-3 mb-3 w-full border-2 rounded-xl text-white bg-brown hover:bg-brown-header hover:text-black hover:border-brown hover:duration-500">Отправить
-                        письмо</button>
-                      <div class="flex justify-center items-center">
-                        <input class="mr-2 w-3 h-3 rounded-full" type="checkbox" name="approval" id="approval">
-                        <label class="text-slate-600 text-lg" for="approval">Согласие на обработку данных</label>
-                      </div>
-                    </form>
+          <div
+            class="flex flex-col justify-between text-center h-[692px] top-0 right-[417px] absolute bg-brown max-2xl:-right-10 max-mdtwo:static max-mdtwo:items-end max-mdtwo:h-auto max-mdtwo:bg-brown-header">
+            <a href="/"
+              class="mt-7 max-mdtwo:hidden border-y border-y-brown hover:border-y-brown-header hover:duration-500">
+              <img src="/themes/demo/assets/images/logo.svg" alt="Логотип компании СевМебель">
+            </a>
+            <div
+              class="flex flex-col mx-8 mb-16 text-white font-bold text-xl max-mdtwo:mx-0 max-mdtwo:mb-0 max-mdtwo:font-normal">
+              <a class="py-3 px-4 mb-8 max-mdtwo:hidden border border-white hover:text-brown hover:bg-white hover:duration-500"
+                href="tel:+79385277708">+7 938
+                527-77-08</a>
+              <button
+                class="btnform py-3 px-6 border border-white hover:text-brown hover:bg-white max-mdtwo:w-max max-mdtwo:mt-3 max-mdtwo:py-2 max-md:text-base max-mdtwo:hover:bg-brown max-mdtwo:hover:text-white max-mdtwo:rounded-xl max-mdtwo:border-brown max-mdtwo:text-black hover:duration-500">Обратная
+                связь</button>
+              <div class="popup">
+                <div class="popup__container">
+                  <div class="popup__wrapper">
+                    <div id="formheader">
+                      <form class="text-xl relative p-10 max-mdtwo:p-5 shadow-blok1 text-black" method="post"
+                        data-request="{{ genericForm }}::onFormSubmit">
+                        {{ form_token() }}
+                        <div id="{{ genericForm }}_forms_flash"></div>
+                        <button class="formclose absolute top-5 right-5">
+                          <img class="w-8 max-md:w-5" src="/themes/demo/assets/images/close.svg" alt="close">
+                        </button>
+                        <h2 class="text-4xl mb-5 max-1.3xl:text-3xl max-mdtwo:text-2xl max-md:text-lg max-md:mb-2">Напишите нам</h2>
+                        <p class="mb-5 text-slate-600 max-1.3xl:text-lg max-mdtwo:text-base max-md:text-xs max-md:mb-2">Задавайте ваш вопрос в форме обратной связи, мы ответим в
+                          течении рабочего дня</p>
+                        <div class="mb-6 max-mdtwo:mb-4 max-md:mb-2">
+                          <input type="text" name="name"
+                            class="text-lg max-mdtwo:text-sm max-md:text-xs max-md:h-7 border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5 "
+                            placeholder="ФИО получателя" required>
+                        </div>
+                        <div class="mb-6 max-mdtwo:mb-4 max-md:mb-2">
+                          <input type="tel" name="tele"
+                            class="text-lg max-mdtwo:text-sm max-md:text-xs max-md:h-7 border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
+                            placeholder="Ваш телефон" required>
+                        </div>
+                        <div class="mb-6 max-mdtwo:mb-4 max-md:mb-2">
+                          <input type="email" name="email"
+                            class="text-lg max-mdtwo:text-sm max-md:text-xs max-md:h-7 border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
+                            placeholder="Ваш e-mail" required>
+                        </div>
+                        <div class="mb-6 max-mdtwo:mb-4 max-md:mb-2">
+                          <textarea name="text"
+                            class="text-lg max-mdtwo:text-sm max-md:text-xs max-md:h-10 border border-light-orange rounded-lg focus:ring-brown-header focus:border-brown w-full p-2.5"
+                            placeholder="Напишите Ваше письмо" required></textarea>
+                        </div>
+                        <a href="/thanks#thanks" type="submit" id="simpleContactSubmitButton"
+                          class="px-6 py-3 mb-3 w-full border-2 max-mdtwo:py-2 max-mdtwo:text-base max-md:text-xs max-md:border rounded-xl text-white bg-brown hover:bg-brown-header hover:text-black hover:border-brown hover:duration-500">Отправить
+                          письмо</a>
+                        <div class="flex justify-center items-center max-md:items-start">
+                          <input class="mr-2 w-3 h-3 max-md:mt-2 rounded-full" type="checkbox" name="approval" id="approval">
+                          <label class="text-slate-600 text-lg max-mdtwo:text-sm max-md:text-xs" for="approval">Согласие на обработку данных</label>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -142,7 +142,8 @@ emails_date_format = "Y-m-d"
     </div>
   </div>
 </section>
-<section class="max-w-site m-0 m-auto max-lg:bg-cover" style="background-image: url(/themes/demo/assets/images/fonheader.png);">
+<section class="max-w-site m-0 m-auto max-lg:bg-cover"
+  style="background-image: url(/themes/demo/assets/images/fonheader.png);">
   <div class="fonheader m-0 m-auto font-futura text-2xl"
     style="background-image: url(/themes/demo/assets/images/fonright.png);">
     <div class="max-w-container m-0 m-auto max-1.5xl:mr-64 max-mdtwo:mr-0">
@@ -168,12 +169,13 @@ emails_date_format = "Y-m-d"
           </div>
           <div
             class="max-w-[550px] max-2xl:mr-56 max-2xl:justify-self-end max-1.5xl:mr-0 max-1.5xl:justify-self-start max-1.5xl:ml-20 max-1.5xl:max-w-xl max-xl:ml-10 max-smtwo:ml-7 max-sm:ml-5 max-mini:ml-1">
-            <h2 class="mt-12 mb-10 font-bold text-3xl max-2xl:mt-0 max-smtwo:text-2xl">Мебель на заказ</h2>
+            <h2 class="mt-12 mb-10 font-bold text-3xl max-2xl:mt-0 max-smtwo:text-2xl max-smtwo:mb-5">Мебель на заказ
+            </h2>
             <div
               class="w-[373px] h-[186px] flex flex-col justify-between max-1.5xl:w-full max-1.5xl:h-auto max-smtwo:text-lg">
               <p class="max-1.5xl:mr-10">Подберем решение для Вашего офиса, квартиры и дома.</p>
               <p>Учтём все пожелания и выполним заказ в срок 30
-                календарных дней с гарантией 12 месяцев</p>
+                календарных дней с гарантией 12 месяцев.</p>
             </div>
           </div>
         </div>

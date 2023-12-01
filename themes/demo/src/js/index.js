@@ -127,49 +127,25 @@ searchClose.addEventListener('click', () => {
   search.classList.remove('search--open');
 });
 
-const listOpen = document.querySelector('.blog-nav__btn');
-const list =  document.querySelector('.blog-nav');
-const listClose = document.querySelector('.blog-nav__close');
-
-listOpen.addEventListener('click', () => {
-  list.classList.add('blog-nav--open');
-});
-
-listClose.addEventListener('click', () => {
-  list.classList.remove('blog-nav--open');
-});
-
-// card-prod
-
-var card = document.querySelector('.card-form');
-card.addEventListener('mouseover', function () {
-    var cardmenu = document.querySelector('.card-form__list');
-    cardmenu.style.display = 'block';
-});
-
-card.addEventListener('mouseout', function () {
-    var cardmenu = document.querySelector('.card-form__list');
-    cardmenu.style.display = 'none';
-});
-
 // corzina
 
 let quantityInput = document.querySelector('.quantity-input');
 let minusBtn = document.querySelector('.quantity-btn-minus');
 let plusBtn = document.querySelector('.quantity-btn-plus');
 
-minusBtn.addEventListener('click', decreaseQuantity);
-plusBtn.addEventListener('click', increaseQuantity);
+if (quantityInput && minusBtn && plusBtn) {
+  minusBtn.addEventListener('click', decreaseQuantity);
+  plusBtn.addEventListener('click', increaseQuantity);
+}
 
 function decreaseQuantity() {
   let currentValue = parseInt(quantityInput.value);
   if (currentValue > 1) {
     quantityInput.value = currentValue - 1;
   }
-};
+}
 
 function increaseQuantity() {
   let currentValue = parseInt(quantityInput.value);
   quantityInput.value = currentValue + 1;
-};
-
+}

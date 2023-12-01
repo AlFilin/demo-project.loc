@@ -1,116 +1,109 @@
 <section class="max-w-site m-0 m-auto pt-20 mb-24 max-xl:pt-12" id="catalog">
   <div class="max-w-block m-0 m-auto font-futura mx-5">
-    <div class="grid grid-cols-[400px_auto] items-center mb-20 max-mdtwo:grid-cols-1 max-mdtwo:items-start max-mdtwo:mb-10">
+    <div
+      class="grid grid-cols-[400px_auto] items-center mb-20 max-mdtwo:grid-cols-1 max-mdtwo:items-start max-mdtwo:mb-10">
       <h2 class="text-5xl font-inter font-medium max-xl:text-4xl">Каталог мебели</h2>
       <span class="h-2 bg-brown w-full max-mdtwo:h-1"></span>
     </div>
-    <form class="flex justify-center items-center text-2xl mb-20 mr-9 max-sm:flex-col max-sm:mb-8 max-sm:items-start" action="" method="post">
-      <label class="mr-16 font-inter max-smtwo:mr-10 max-sm:mb-5" for="sorting">Сортировать:</label>
-      <select class="w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[200px] bg-right-1 text-text-gray/50 text-2xl  hover:text-brown focus:text-brown focus:ring-brown focus:border-brown" name="sorting" id="sorting">
+    <form class="flex justify-center items-center text-2xl mb-20 mr-9 max-lg:mb-10 max-smtwo:flex-col max-smtwo:mb-8 max-smtwo:items-start"
+      action="" method="post">
+      <label class="mr-16 font-inter max-smtwo:mr-10 max-smtwo:mb-5" for="sorting">Сортировать:</label>
+      <select
+        class="w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[250px] max-smtwo:h-12 max-smtwo:p-2 max-smtwo:text-base bg-right-1 text-text-gray/50 text-2xl hover:text-brown focus:text-brown focus:ring-brown focus:border-brown"
+        name="sorting" id="sorting">
         <option value="1">По алфавиту</option>
         <option value="2">По убыванию цены</option>
         <option value="3">По возрастанию цены</option>
         <option value="4">По популярности</option>
       </select>
     </form>
-    <div class="grid grid-cols-[400px_auto] max-lg:grid-cols-1 max-1.5lg:grid-cols-[330px_auto]">
-        <div class="blog-nav mr-10">
-          <div class="blog-nav-button">
-            <button class="blog-nav__btn">Категории</button>
-            <button class="blog-nav__close">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)"
-                  fill="#999999" />
-                <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)"
-                  fill="#999999" />
-                <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2" />
-              </svg>
-            </button>
-          </div>
-          <ul class="blog-list text-3xl font-bold max-w-[400px] max-smtwo:grid-cols-1">
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-2.5 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon1.png" alt="icon">
-              </div>
-              <a href="/catalog">Столы</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon2.png" alt="icon">
-              </div>
-              <a href="/catalog">Стулья</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon3.png" alt="icon">
-              </div>
-              <a href="/catalog">Комоды</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon4.png" alt="icon">
-              </div>
-              <a href="/catalog">Тумбочки</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon5.png" alt="icon">
-              </div>
-              <a href="/catalog">Кровати</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon6.png" alt="icon">
-              </div>
-              <a href="/catalog">Диваны</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon7.png" alt="icon">
-              </div>
-              <a href="/catalog">Пуфы</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon8.png" alt="icon">
-              </div>
-              <a href="/catalog">Полки навесные</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon9.png" alt="icon">
-              </div>
-              <a href="/catalog">Стеллажи</a>
-            </li>
-            <li
-              class="blog-list__item flex mb-5 pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon10.png" alt="icon">
-              </div>
-              <a href="/catalog">Мангалы</a>
-            </li>
-            <li
-              class="blog-list__item flex pl-6 py-4 bg-white items-center border-light-orange hover:bg-light-orange hover:duration-500 border-2 border-solid rounded-md">
-              <div class="w-[90px]">
-                <img class="m-auto" src="/themes/demo/assets/images/icon11.png" alt="icon">
-              </div>
-              <a href="/catalog">Для дачи</a>
-            </li>
-          </ul>
-        </div>
-        <div class="max-w-[1096px]">
-          <ul
-            class="grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg">
-            <li
+    <div class="grid grid-cols-[400px_auto] justify-between max-1.5lg:grid-cols-[330px_auto] max-lg:grid-cols-1">
+      <div class="mr-10 max-lg:mr-0">
+        <ul
+          class="blog-list text-3xl font-bold max-w-[400px] grid grid-cols-1 max-lg:grid-cols-3 max-lg:gap-x-3 max-lg:max-w-full max-lg:mb-5 max-lg:text-2xl max-md:grid-cols-2 max-smtwo:gap-2 max-smtwo:text-xl">
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-2.5 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon1.png" alt="icon">
+            </div>
+            <a href="/catalog">Столы</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon2.png" alt="icon">
+            </div>
+            <a href="/catalog">Стулья</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon3.png" alt="icon">
+            </div>
+            <a href="/catalog">Комоды</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon4.png" alt="icon">
+            </div>
+            <a href="/catalog">Тумбочки</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon5.png" alt="icon">
+            </div>
+            <a href="/catalog">Кровати</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon6.png" alt="icon">
+            </div>
+            <a href="/catalog">Диваны</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon7.png" alt="icon">
+            </div>
+            <a href="/catalog">Пуфы</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon9.png" alt="icon">
+            </div>
+            <a href="/catalog">Стеллажи</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon10.png" alt="icon">
+            </div>
+            <a href="/catalog">Мангалы</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center mb-5 pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0 max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon11.png" alt="icon">
+            </div>
+            <a href="/catalog">Для дачи</a>
+          </li>
+          <li
+            class="blog-list__item flex items-center pl-6 py-4 max-lg:pl-0 max-smtwo:pl-3 max-lg:mb-5 max-smtwo:mb-0 max-minitwo:py-2 max-sm:col-span-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2 max-md:border border-solid rounded-md">
+            <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8 max-mini:w-5">
+              <img class="m-auto" src="/themes/demo/assets/images/icon8.png" alt="icon">
+            </div>
+            <a class="max-mdtwo:pr-1" href="/catalog">Полки навесные</a>
+          </li>
+        </ul>
+      </div>
+      <div class="max-w-[1096px]">
+        <ul
+          class="grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg">
+          <li
             class="max-w-[280px] p-5 bg-white rounded-lg shadow-card bg-300% max-mini:max-w-[170px] hover:shadow-light-black hover:duration-700"
             style="background-image: url(/themes/demo/assets/images/brick-wall-painted-white.png);">
             <a href="/card-product#card-product">
