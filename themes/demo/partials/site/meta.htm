@@ -1,10 +1,15 @@
 <meta charset="utf-8">
-<title>October CMS - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
+<title>Лофт мебель - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
 <meta name="description" content="{{ this.page.meta_description }}">
 <meta name="title" content="{{ this.meta.content_title }}">
-<meta name="author" content="October CMS">
+<meta name="author" content="web-studio-51">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="October CMS">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sever-loftmebel.ru/my-page">
+<meta property="og:title" content="{{ this.page.meta_title }}">
+<meta property="og:description" content="{{ this.page.meta_description }}">
+<meta property="og:image" content="https://sever-loftmebel.ru/images/og-image.jpg">
 <link rel="shortcut icon" href="/themes/demo/assets/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -13,7 +18,11 @@
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
+{% framework extras %}
+{% scripts %}
+
 {{ vite([ 'src/css/index.css' ]) }}
 {{ vite([ 'src/js/index.js' ]) }}
+{{ vite([ 'src/js/commerce.js' ]) }}
 
 {% styles %}

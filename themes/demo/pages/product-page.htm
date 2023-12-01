@@ -1,0 +1,45 @@
+title = "Карточка товара"
+url = "/catalog/:category/:slug"
+meta_title = "Карточка товара"
+layout = "home"
+
+[CategoryPage]
+slug = "{{ :slug }}"
+slug_required = 0
+smart_url_check = 1
+has_wildcard = 0
+skip_error = 1
+
+[CategoryPage MainCategoryPage]
+slug = "{{ :category }}"
+slug_required = 1
+smart_url_check = 1
+has_wildcard = 0
+skip_error = 1
+
+[ProductPage]
+slug = "{{ :slug }}"
+slug_required = 0
+smart_url_check = 1
+skip_error = 1
+
+[ProductList]
+sorting = "no"
+==
+function onInit() {
+$obProductItem = $this->ProductPage->get();
+$obCategoryItem = $this->CategoryPage->get();
+$obMainCategoryItem = $this->MainCategoryPage->get();
+if (!empty($this->param('slug')) && empty($obProductItem) && empty($obCategoryItem)) {
+return $this->ProductPage->getErrorResponse();
+}
+
+$obActiveCategoryItem = !empty($obCategoryItem) ? $obCategoryItem : $obMainCategoryItem;
+
+$this['obProduct'] = $obProductItem;
+$this['obActiveCategory'] = $obActiveCategoryItem;
+$this['relatedProducts'] = $this->ProductList->make()->active()->take(10);
+
+}
+==
+{% ajaxPartial 'product-page' %}
