@@ -7,8 +7,13 @@
 {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().category(obCategory.id, true) %}
 {% else %}
 {% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().take(20) %}
-
 {% endif %}
+
+{% set iPage = Pagination.getPageFromRequest() %}
+{% set iCount = obProductList.count() %}
+
+{# Apply pagination to product collection and get array with product items #}
+{% set obProductList = obProductList.page(iPage, Pagination.getCountPerPage()) %}
 
 {% set arSEOParams = {'category': obCategory} %}
 
@@ -16,13 +21,19 @@
 {% component 'SeoToolbox' model=obCategory params=arSEOParams %}
 {% endput %}
 
-<section class="max-w-site m-0 m-auto pt-20 mb-24 max-xl:pt-12" id="catalog">
+{% set arBreadcrumbs = [
+{'active': true, 'name': obCategory.name }
+] %}
+
+<section class=" m-0 m-auto pt-20 mb-24 max-xl:pt-12 max-w-block" id="catalog">
     <div class="max-w-block m-0 m-auto font-futura mx-5">
         <div
             class="grid grid-cols-[400px_auto] items-center mb-20 max-mdtwo:grid-cols-1 max-mdtwo:items-start max-mdtwo:mb-10">
             <h2 class="text-5xl font-inter font-medium max-xl:text-4xl">Каталог мебели</h2>
             <span class="h-2 bg-brown w-full max-mdtwo:h-1"></span>
+            {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs   %}
         </div>
+
         <form
             class="flex justify-center items-center text-2xl mb-20 mr-9 max-sm:flex-col max-sm:mb-8 max-sm:items-start"
             action="" method="post">
@@ -64,7 +75,8 @@
                     {% endfor %}
                 </ul>
                 {% else %}
-                В данной категории нет товаров</p>
+                {% set obProductList = ProductList.make().active().category(22).take() %}
+
                 {% endif %}
             </div>
         </div>

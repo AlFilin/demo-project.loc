@@ -8,6 +8,7 @@ const input = {
     css: resolve(__dirname, 'src/js/index.js'),
     commerce: resolve(__dirname, 'src/js/commerce.js'),
     order: resolve(__dirname, 'src/js/order.js'),
+    search: resolve(__dirname, 'src/js/search.js'),
 }
 
 // Auto detect the theme name, works only if one theme is available.

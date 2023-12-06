@@ -1,0 +1,52 @@
+<section class="max-w-site m-0 m-auto mx-5">
+  <div class="max-w-block m-0 m-auto text-xl font-futura mb-32 max-mdtwo:mb-20 max-smtwo:text-lg">
+    <div class="grid grid-cols-[520px_auto] items-end mb-16 max-mdtwo:flex max-mdtwo:flex-col max-mdtwo:items-start max-md:mb-10">
+      <h2 class="text-5xl max-smtwo:text-4xl">Работаем <span class="font-black">по всей России</span></h2>
+      <span class="h-2 w-full bg-brown mb-3 bold max-mdtwo:h-1"></span>
+    </div>
+    <div class="grid grid-cols-2 max-mdtwo:grid-cols-1">
+      <div class="flex flex-col justify-between mr-32 max-xl:mr-10 max-md:mr-0">
+        <div class="mb-10 font-semibold leading-8">
+          <p class="mb-6 max-1.5lg:mb-3">Создайте свою уникальную лофт мебель и превратите свой дом в стильное пространство с
+            индустриальным
+            шармом.
+          </p>
+          <p class="mb-6 max-1.5lg:mb-3">Наша компания предлагает широкий выбор дизайнерских элементов мебели, которые помогут вам
+            создать
+            атмосферу
+            лофта, отражающую вашу индивидуальность.</p>
+          <p class="mb-6 max-1.5lg:mb-3">Используйте смелые комбинации металла, дерева и сырого бетона,
+            чтобы добавить характер и элегантность вашему интерьеру.</p>
+          <p>Воплотите свои творческие идеи в реальность с нашей
+            помощью и создайте уникальное пространство, которое будет вдохновлять вас и ваших гостей.</p>
+        </div>
+        <a href="" class="max-md:flex max-md:justify-center">
+          <button
+            class="text-white w-full max-w-[355px] h-[50px] border bg-button rounded-xl hover:border-brown hover:underline hover:duration-300">Узнать
+            про доставку</button>
+        </a>
+      </div>
+      <div class="relative h-full rounded-lg max-mdtwo:hidden">
+          {% partial 'helpers/image'
+          src = "/themes/demo/assets/images/blog5img.png"
+          mobSrc = "/themes/demo/assets/images/blog5img.png"
+          width = 815 height = 543
+          mobWidth = 815 mobHeight = 543
+          alt = "Магазин мебели" class="imageZoom object-contain h-full"
+          %}
+
+          <div class="absolute h-full top-0 right-0">
+            {% partial 'helpers/image'
+            src = "/themes/demo/assets/images/blog5img2.png"
+            mobSrc = "/themes/demo/assets/images/blog5img2.png"
+            width = 697 height = 407
+            mobWidth = 697 mobHeight = 407
+            alt = "Доставка лофт мебели" class="imageZoom object-contain h-full"
+            %}
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

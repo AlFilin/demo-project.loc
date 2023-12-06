@@ -7,45 +7,21 @@ meta_description = "Широкий ассортимент элегантных �
 [ProductList]
 sorting = "new"
 
-[Pagination]
-count_per_page = 1
-pagination_limit = 5
-active_class = ""
-button_list = "first,first-more,main,last-more,last"
-first_button_name = "First"
-first_button_limit = 3
-first_button_number = 1
-first-more_button_name = "..."
-first-more_button_limit = 4
-prev_button_name = "Prev"
-prev_button_limit = 1
-prev-more_button_name = "..."
-prev-more_button_limit = 1
-next-more_button_name = "..."
-next-more_button_limit = 1
-next_button_name = "Next"
-next_button_limit = 1
-last-more_button_name = "..."
-last-more_button_limit = 4
-last_button_name = "Last"
-last_button_limit = 3
-last_button_number = 1
+
 ==
 {% set obCategoryList = CategoryList.make().tree() %}
-{% set obProductList = ProductList.make().active().category(11).take(20) %}
-{% set iPage = Pagination.getPageFromRequest() %}
-{% set iCount = obProductList.count() %}
-{% set arProductList = obProductList.page(iPage, Pagination.getCountPerPage()) %}
-{{d(arProductList)}}
-{% ajaxPartial 'blog' obProductList=arProductList %}
+{% set obProductList = ProductList.make().active().category(22).take() %}
 
-{% ajaxPartial 'blog2' %}
+{% ajaxPartial 'block-1' %}
 
-{% ajaxPartial 'blog3' %}
+{% ajaxPartial 'block-2' %}
 
-{% ajaxPartial 'blog4' %}
+{% ajaxPartial 'block-3' %}
 
-{% ajaxPartial 'blog5' %}
+{% ajaxPartial 'block-4' %}
 
-{% ajaxPartial 'blog6' %}
+{% ajaxPartial 'block-5' %}
+
+{% ajaxPartial 'block-6' %}
+
 

@@ -1,0 +1,91 @@
+{% set sSearchText = input('search') %}
+{% set arCategoryList = CategoryList.make().active().search(sSearchText) %}
+{% set arProductList = ProductList.make().active().search(sSearchText) %}
+{% if arCategoryList is not empty or arProductList is not empty %}
+<span id="close_search" class="close_search">✖</span>
+{% for obCategory in arCategoryList %}
+<li class="search-panel__result-item">
+    <a href="{{ obCategory.getPageUrl('product-page') }}#card-product" class="search-panel__result-value">
+        {{ obCategory.name }}
+    </a>
+</li>
+{% endfor %}
+{% for obProduct in arProductList %}
+<li class="search-panel__result-item">
+    <a href="{{ obProduct.getPageUrl('product-page') }}#card-product" target="_blank">
+        {% if obProduct.preview_image.path is not empty %}
+        <div>
+            <img class="product-card__img" src="{{ obProduct.preview_image.getThumb(100, auto, {'quantity': 80}) }}"
+                 itemprop="image" alt="{{ obProduct.preview_image.description }}" title="{{ obProduct.name }}"
+                 style="width: 100px; border-radius: 5px; padding: 5px;">
+        </div>
+        {% endif %}
+        <div style="padding-left: 5px;">
+            <a href="{{ obProduct.getPageUrl('product-page') }}#card-product" class="search-panel__result-value" title="{{ obProduct.name }}">
+                {{ obProduct.name }}
+            </a>
+            <p style="font-size: 13px;" class="search-panel__description">{{ str_limit(obProduct.description, 60, '...') |raw}}</p>
+        </div>
+    </a>
+</li>
+{% endfor %}
+{% elseif sSearchText is not empty %}
+<li class="search-panel__result-item" style="background-color: white; display: flex; flex-direction: column;">
+        <span class="search-panel__result-value" style="font-family: 'Roboto'; font-style: normal;font-weight: 700;font-size: 32px;line-height: 38px;text-align: center;color: #0F141E;">
+            Ничего не найдено
+            <span class="search-panel__result-search-text">"{{ sSearchText }}"</span>
+        </span>
+</li>
+{% endif %}
+
+{% if arProductList is not empty or sSearchText is not empty %}
+<style type="text/css" media="all">
+    .search-panel__result {
+        width: 100%;
+        position: absolute;
+        padding: 20px;
+        right: 0;
+        top: 60px;
+        height: 300px;
+        z-index: 999999;
+        background-color: white;
+        border-radius: 3px;
+        list-style-type: none;
+        overflow-y: auto;
+    }
+
+
+    @media all and (max-width: 576px) {
+        .search li a {
+            font-size: 12px;
+        }
+
+        .search-panel__result {
+            left: 0;
+
+            top: 50px;
+        }
+
+        .search-panel__result-item:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    .close_search{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transform: rotate(45deg);
+    }
+    .close_search:hover{
+        cursor: pointer;
+    }
+</style>
+<script>
+    var btn = document.getElementById('close_search');
+    btn.onclick = function() {
+        window.location.reload()
+    }
+
+</script>
+
+{% endif %}

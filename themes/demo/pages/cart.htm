@@ -1,0 +1,21 @@
+title = "Корзина"
+url = "/cart"
+meta_title = "Корзина"
+layout = "home"
+
+[MakeOrder]
+mode = "ajax"
+flash_on = 1
+redirect_on = 1
+redirect_page = "/thanks"
+
+[ProductData]
+
+[ShippingTypeList]
+
+[PaymentMethodList]
+==
+
+{{ vite([ 'src/js/order.js' ]) }}
+
+{% ajaxPartial 'cart' %}

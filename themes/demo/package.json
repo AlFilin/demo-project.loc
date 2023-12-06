@@ -19,6 +19,8 @@
     "bootstrap-icons": "^1.10",
     "codemirror": "^5.64.0",
     "flowbite": "^2.2.0",
+	"fast-image-zoom": "^7.0.1",
+    "focus-trap": "^7.5.4",
     "jquery": "^3.6.0",
     "lazysizes": "^5.3.2",
     "photoswipe": "^5.2.4",

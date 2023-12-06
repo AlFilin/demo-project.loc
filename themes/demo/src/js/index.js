@@ -1,4 +1,13 @@
 import './lazyload.js';
+import './shopaholic-search.js';
+import imageZoom from 'fast-image-zoom'
+imageZoom({
+    selector: `.imageZoom`,
+    containerSelector: null,
+    cb: () => {},
+    exceed: false,
+    padding: 20,
+})
 // burger
 
 let burger = document.querySelector('.menu-burger__header');
@@ -41,20 +50,20 @@ for (var i = 0; i < accordionItems.length; i++) {
 
 // popup
 
-const btncontact = document.querySelector('.btnform');
-const formcontact = document.querySelector('#formheader');
-const popup = document.querySelector('.popup');
-const formclose = document.querySelector('.formclose');
-
-
-btncontact.addEventListener('click', () => {
-    formcontact.classList.add('open');
-    popup.classList.add('popup_open');
-});
-formclose.addEventListener('click', () => {
-    formcontact.classList.remove('open');
-    popup.classList.remove('popup_open');
-});
+// const btncontact = document.querySelector('.btnform');
+// const formcontact = document.querySelector('#formheader');
+// const popup = document.querySelector('.popup');
+// const formclose = document.querySelector('.formclose');
+//
+//
+// btncontact.addEventListener('click', () => {
+//     formcontact.classList.add('open');
+//     popup.classList.add('popup_open');
+// });
+// formclose.addEventListener('click', () => {
+//     formcontact.classList.remove('open');
+//     popup.classList.remove('popup_open');
+// });
 
 // swiper
 
@@ -128,48 +137,138 @@ searchClose.addEventListener('click', () => {
 });
 
 const listOpen = document.querySelector('.blog-nav__btn');
-const list =  document.querySelector('.blog-nav');
+const list = document.querySelector('.blog-nav');
 const listClose = document.querySelector('.blog-nav__close');
 
-listOpen.addEventListener('click', () => {
-  list.classList.add('blog-nav--open');
-});
+if (listOpen) {
+    listOpen.addEventListener('click', () => {
+        if (list) {
+            list.classList.add('blog-nav--open');
+        }
+    });
+}
 
-listClose.addEventListener('click', () => {
-  list.classList.remove('blog-nav--open');
-});
-
+if (listClose) {
+    listClose.addEventListener('click', () => {
+        if (list) {
+            list.classList.remove('blog-nav--open');
+        }
+    });
+}
 // card-prod
-
 var card = document.querySelector('.card-form');
-card.addEventListener('mouseover', function () {
-    var cardmenu = document.querySelector('.card-form__list');
-    cardmenu.style.display = 'block';
-});
 
-card.addEventListener('mouseout', function () {
-    var cardmenu = document.querySelector('.card-form__list');
-    cardmenu.style.display = 'none';
-});
+if (card) {
+    card.addEventListener('mouseover', function () {
+        var cardmenu = document.querySelector('.card-form__list');
+        if (cardmenu) {
+            cardmenu.style.display = 'block';
+        }
+    });
 
+    card.addEventListener('mouseout', function () {
+        var cardmenu = document.querySelector('.card-form__list');
+        if (cardmenu) {
+            cardmenu.style.display = 'none';
+        }
+    });
+}
 // corzina
 
 let quantityInput = document.querySelector('.quantity-input');
 let minusBtn = document.querySelector('.quantity-btn-minus');
 let plusBtn = document.querySelector('.quantity-btn-plus');
 
-minusBtn.addEventListener('click', decreaseQuantity);
-plusBtn.addEventListener('click', increaseQuantity);
+if (minusBtn) {
+    minusBtn.addEventListener('click', decreaseQuantity);
+}
+
+if (plusBtn) {
+    plusBtn.addEventListener('click', increaseQuantity);
+}
 
 function decreaseQuantity() {
-  let currentValue = parseInt(quantityInput.value);
-  if (currentValue > 1) {
-    quantityInput.value = currentValue - 1;
-  }
+    if (quantityInput) {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    }
 };
 
 function increaseQuantity() {
-  let currentValue = parseInt(quantityInput.value);
-  quantityInput.value = currentValue + 1;
+    if (quantityInput) {
+        let currentValue = parseInt(quantityInput.value, 10);
+        quantityInput.value = currentValue + 1;
+    }
 };
 
+document.querySelectorAll('nav .menu-item li').forEach(item => {
+
+
+    item.addEventListener('mouseover', () => {
+        let imgElement = item.querySelector('img');
+
+        if (!imgElement.dataset.originalSrc) { // Сохраняем исходный src, если он еще не сохранен
+            imgElement.dataset.originalSrc = imgElement.src;
+        }
+        imgElement.src = '/themes/demo/assets/images/icon4.png';
+        item.classList.add('active');
+    });
+
+    item.addEventListener('mouseout', () => {
+        let imgElement = item.querySelector('.itemImage');
+        imgElement.src = imgElement.dataset.originalSrc; // Возвращаем исходный src
+        item.classList.remove('active');
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.productCard');
+
+    productCards.forEach(card => {
+        const img = document.createElement('img');
+        img.src = '/themes/demo/assets/images/inproduct.png';
+        img.className = 'inProduct';
+        card.style.position = 'relative'; // Убедитесь, что у .productCard есть position: relative
+        card.appendChild(img);
+    });
+});
+
+
+
+document.querySelectorAll('.callBackBtn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('modal').showModal();
+    });
+});
+
+document.getElementById('modal').addEventListener('click', event => {
+    // Если клик был вне формы, закрываем модальное окно
+    if (event.target.nodeName === 'DIALOG') {
+        document.getElementById('modal').close();
+    }
+});
+
+// Закрытие модального окна по клику на крестик
+document.getElementById('closeBtn').addEventListener('click', () => {
+    document.getElementById('modal').close();
+});
+
+
+// Получаем элементы для работы с ними
+const callBackBtns = document.querySelectorAll('.callBackBtn');
+const modal = document.getElementById('modal');
+
+// // Функция для закрытия модального окна при клике вне его содержимого
+// window.onclick = function(event) {
+//     if (event.target === modal) {
+//         modal.close();
+//     }
+// };
+//
+// // Открытие модального окна при клике на любую кнопку с классом .callBackBtn
+// callBackBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         modal.showModal();
+//     });
+// });
