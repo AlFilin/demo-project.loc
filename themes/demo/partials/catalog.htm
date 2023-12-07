@@ -4,9 +4,10 @@
 {% set obCategory = CategoryPage.get() %}
 
 {% if obCategory != null %}
-{% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().category(obCategory.id, true) %}
+{% set obProductList = ProductList.make().active().category(obCategory.id, true) %}
+
 {% else %}
-{% set obProductList = ProductList.make().sort(ProductList.getSorting()).active().take(20) %}
+{% set obProductList = ProductList.make().active().take(20) %}
 {% endif %}
 
 {% set iPage = Pagination.getPageFromRequest() %}
@@ -24,6 +25,11 @@
 {% set arBreadcrumbs = [
 {'active': true, 'name': obCategory.name }
 ] %}
+{% if obCategory.name is empty %}
+{% set arBreadcrumbs = [
+{'active': true, 'name': 'Категории' }
+] %}
+{% endif %}
 
 <section class=" m-0 m-auto pt-20 mb-24 max-xl:pt-12 max-w-block" id="catalog">
     <div class="max-w-block m-0 m-auto font-futura mx-5">
@@ -39,12 +45,11 @@
             action="" method="post">
             <label class="mr-16 font-inter max-smtwo:mr-10 max-sm:mb-5" for="sorting">Сортировать:</label>
             <select
-                class="w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[200px] bg-right-1 text-text-gray/50 text-2xl  hover:text-brown focus:text-brown focus:ring-brown focus:border-brown"
+                class="_shopaholic-sorting w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[200px] bg-right-1 text-text-gray/50 text-2xl  hover:text-brown focus:text-brown focus:ring-brown focus:border-brown"
                 name="sorting" id="sorting">
-                <option value="1">По алфавиту</option>
-                <option value="2">По убыванию цены</option>
-                <option value="3">По возрастанию цены</option>
-                <option value="4">По популярности</option>
+                <option value="price|asc">По алфавиту</option>
+                <option value="price|desc">По цене</option>
+                <option  value="popularity|desc">По популярности</option>
             </select>
         </form>
         <div class="grid grid-cols-[400px_auto] max-lg:grid-cols-1 max-1.5lg:grid-cols-[330px_auto]">
@@ -65,20 +70,11 @@
                 </div>
                 {% partial 'menu' %}
             </div>
-            <div class="max-w-[1096px]">
-                <ul class="grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg">
-
-                    {% if obProductList is not empty %}
-                    {% for obProduct in obProductList %}
-                    {% set obOffer = obProduct.offer.first() %}
-                    {% partial 'product-card' %}
-                    {% endfor %}
-                </ul>
-                {% else %}
-                {% set obProductList = ProductList.make().active().category(22).take() %}
-
-                {% endif %}
+            <div class="catalog__wrapper max-w-[1096px]">
+ 
+                {% partial 'catalog/catalog-ajax' %}
             </div>
         </div>
     </div>
 </section>
+

@@ -15,11 +15,12 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@lovata/shopaholic-product-list": "^1.0.1",
     "bootstrap": "^5.3.0",
     "bootstrap-icons": "^1.10",
     "codemirror": "^5.64.0",
+    "fast-image-zoom": "^7.0.1",
     "flowbite": "^2.2.0",
-	"fast-image-zoom": "^7.0.1",
     "focus-trap": "^7.5.4",
     "jquery": "^3.6.0",
     "lazysizes": "^5.3.2",

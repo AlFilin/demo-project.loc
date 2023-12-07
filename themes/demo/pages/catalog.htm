@@ -14,7 +14,7 @@ has_wildcard = 0
 skip_error = 0
 
 [Pagination]
-count_per_page = 1
+count_per_page = 2
 pagination_limit = 5
 active_class = ""
 button_list = "first,first-more,main,last-more,last"
@@ -40,6 +40,19 @@ last_button_number = 1
 <?php
 use lovata\shopaholic\models\Product;
 use lovata\shopaholic\models\Category;
+
+public function onInit(){
+$obCategory = $this->CategoryPage->get();
+$sActiveSorting = $this->ProductList->getSorting();
+$iPage = $this->Pagination->getPageFromRequest();
+$obCategoryProductList = $this->ProductList->make()->active()->sort($sActiveSorting)->category($obCategory->id);
+$arProductList = $obCategoryProductList->page($iPage, $this->Pagination->getCountPerPage());
+
+$this['obCategory'] = $obCategory;
+$this['sActiveSorting'] = $sActiveSorting;
+$this['iPage'] = $iPage;
+$this['obProductList'] = $arProductList;
+}
 
 public function onAddToCart(){
     $quantity = 1;
