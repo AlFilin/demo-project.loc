@@ -18,7 +18,14 @@
             <p class="max-1.5lg:underline max-1.5lg:underline-offset-8 decoration-gray-950">Подберем лучшее цветовое решение</p>
           </div>
         </div>
-          <img class="max-w-[390px] max-1.5xl:justify-self-center max-1.5lg:w-56 max-smtwo:w-40" src="/themes/demo/assets/images/blog4img.png" alt="picture">
+          <!-- <img class="max-w-[390px] max-1.5xl:justify-self-center max-1.5lg:w-56 max-smtwo:w-40" src="/themes/demo/assets/images/blog4img.png" alt="picture"> -->
+          {% partial 'helpers/image'
+          src = "/themes/demo/assets/images/blog4img.png"
+          mobSrc = "/themes/demo/assets/images/blog4img.png"
+          width = 390 height = 640
+          mobWidth = 150 mobHeight = 245
+          alt = "Купить лофт мебель" class="imageZoom"
+          %}
 
         <div class="grid grid-cols-1 items-center ml-5 max-1.5lg:ml-0 max-md:col-start-2 max-smtwo:col-span-2">
           <div class="relative w-full text-end mt-24 max-md:hidden">
