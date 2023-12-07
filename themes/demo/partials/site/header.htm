@@ -22,7 +22,8 @@ emails_date_format = "Y-m-d"
 <section class="max-w-full m-0 m-auto bg-brown-header">
   <div class="max-w-container m-0 m-auto">
     <div class="max-w-block m-0 m-auto font-futura text-2xl mx-5 max-1.5lg:text-xl">
-      <div class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
+      <div
+        class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
         <div class="burder-logo">
           <div class="menu-burger__header max-lg:self-center">
             <span></span>
@@ -31,42 +32,43 @@ emails_date_format = "Y-m-d"
             src="/themes/demo/assets/images/logo.svg" alt="Логотип компании СевМебель">
           <img class="hidden max-sm:block w-14 ml-5" src="/themes/demo/assets/images/logosmall.png" alt="">
         </div>
-          <nav>
-        <ul class="header-list flex max-w-[750px]">
-          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
-            <a href="/">Главная</a>
-          </li>
-          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
-            <a href="/catalog#catalog">Каталог</a>
-          </li>
-          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
-            <a href="">Мебель на заказ</a>
-          </li>
-          <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
-            <a href="/kontakts#kontakts">Контакты</a>
-          </li>
-          <li class="header-list__item hover:text-white hover:duration-300">
-            <a href="/faq#faq">FAQ</a>
-          </li>
-        </ul>
-          </nav>
+        <nav>
+          <ul class="header-list flex max-w-[750px]">
+            <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+              <a href="/">Главная</a>
+            </li>
+            <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+              <a href="/catalog#catalog">Каталог</a>
+            </li>
+            <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+              <a href="">Мебель на заказ</a>
+            </li>
+            <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
+              <a href="/kontakts#kontakts">Контакты</a>
+            </li>
+            <li class="header-list__item hover:text-white hover:duration-300">
+              <a href="/faq#faq">FAQ</a>
+            </li>
+          </ul>
+        </nav>
         <div class="">
           <div class="flex max-2xl:mr-64 max-mdtwo:mr-0 max-mdtwo:justify-end search-wrapper">
-            <div class="search mr-12 max-1.5lg:mr-5 max-mdtwo:mr-4" >
+            <div class="search mr-12 max-1.5lg:mr-5 max-mdtwo:mr-4">
               <a class="search-btn p-2.5 bg-white rounded-full shadow-xl" href="#" title="search">
                 <img class="max-w-[30px] max-md:max-w-[20px]" src="/themes/demo/assets/images/search.svg" alt="search">
               </a>
-                <form  class="form_search search-panel__form" method='post' role='search' aria-controls="search-result">
-              <input class="input_search search-panel__input-field _shopaholic-search-input" type="search" name="search" placeholder="Поиск" id="search-panel" maxlength="10">
-                </form>
-                <ul class="search-panel__result" id="search-result" role="region" aria-live="polite"></ul>
+              <form class="form_search search-panel__form" method="post" role="search" aria-controls="search-result">
+                <input class="search-txt input_search search-panel__input-field _shopaholic-search-input" type="search"
+                  name="search" placeholder="Поиск" id="search-panel" maxlength="10">
+              </form>
+              <ul class="search-panel__result" id="search-result" role="region" aria-live="polite"></ul>
             </div>
             <a href="/cart#cart"
               class="max-w-[50px] p-2.5 max-mdtwo:mr-4 max-md:max-w-[40px] max-md:max-h-[40px] bg-white rounded-full shadow-xl border border-brown-header hover:border-brown hover:duration-300">
               <img class="max-w-[30px] max-md:max-w-[20px] max-md:max-h-[20px]"
                 src="/themes/demo/assets/images/basket.svg" alt="cart">
             </a>
-              {% partial 'counter' %}
+            {% partial 'counter' %}
             <div class="contact-nav hidden max-mdtwo:flex relative items-center max-md:items-start">
               <div class="flex relative z-30">
                 <img class="max-md:max-w-[40px]" src="/themes/demo/assets/images/Icon_ring2.png" alt="">
@@ -95,7 +97,7 @@ emails_date_format = "Y-m-d"
               href="tel:+79385277708">+7 938
               527-77-08</a>
             <button
-              class="btnform py-3 px-6 border border-white hover:text-brown hover:bg-white hover:duration-500 callBackBtn"  >Обратная
+              class="btnform py-3 px-6 border border-white hover:text-brown hover:bg-white hover:duration-500 callBackBtn">Обратная
               связь</button>
 
           </div>
@@ -104,7 +106,8 @@ emails_date_format = "Y-m-d"
     </div>
   </div>
 </section>
-<section class="max-w-site m-0 m-auto max-lg:bg-cover" style="background-image: url(/themes/demo/assets/images/fonheader.png);">
+<section class="max-w-site m-0 m-auto max-lg:bg-cover"
+  style="background-image: url(/themes/demo/assets/images/fonheader.png);">
   <div class="fonheader m-0 m-auto font-futura text-2xl"
     style="background-image: url(/themes/demo/assets/images/fonright.png);">
     <div class="max-w-container m-0 m-auto max-1.5xl:mr-64 max-mdtwo:mr-0">

@@ -3,299 +3,180 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Bold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Bold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Bold.woff") format("woff");
-=======
+
     src: local(""), url("../fonts/FuturaPT-Bold.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Bold.ttf") format("truetype"),
     url("../fonts/FuturaPT-Bold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-Book';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Book.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Book.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Book.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-Book.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Book.ttf") format("truetype"),
     url("../fonts/FuturaPT-Book.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-Demi';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Demi.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Demi.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Demi.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-Demi.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Demi.ttf") format("truetype"),
     url("../fonts/FuturaPT-Demi.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-ExtraBold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-ExtraBold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-ExtraBold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-ExtraBold.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-ExtraBold.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-ExtraBold.ttf") format("truetype"),
     url("../fonts/FuturaPT-ExtraBold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-Heavy';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Heavy.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Heavy.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Heavy.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-Heavy.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Heavy.ttf") format("truetype"),
     url("../fonts/FuturaPT-Heavy.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-Light';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Light.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Light.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Light.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-Light.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Light.ttf") format("truetype"),
     url("../fonts/FuturaPT-Light.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'FuturaPT-Medium';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Medium.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Medium.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/FuturaPT-Medium.woff") format("woff");
-=======
     src: local(""), url("../fonts/FuturaPT-Medium.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Medium.ttf") format("truetype"),
     url("../fonts/FuturaPT-Medium.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Morice-Bejar';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Morice-Bejar.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Morice-Bejar.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Morice-Bejar.woff") format("woff");
-=======
     src: local(""), url("../fonts/Morice-Bejar.eot") format("embedded-opentype"),
     url("../fonts/Morice-Bejar.ttf") format("truetype"),
     url("../fonts/Morice-Bejar.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Pollock1c';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Pollock1c.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Pollock1c.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Pollock1c.woff") format("woff");
-=======
     src: local(""), url("../fonts/Pollock1c.eot") format("embedded-opentype"),
     url("../fonts/Pollock1c.ttf") format("truetype"),
     url("../fonts/Pollock1c.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Lobster-Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Lobster-Regular.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Lobster-Regular.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Lobster-Regular.woff") format("woff");
-=======
     src: local(""), url("../fonts/Lobster-Regular.eot") format("embedded-opentype"),
     url("../fonts/Lobster-Regular.ttf") format("truetype"),
     url("../fonts/Lobster-Regular.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-Black';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Black.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Black.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Black.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-Black.eot") format("embedded-opentype"),
     url("../fonts/Inter-Black.ttf") format("truetype"),
     url("../fonts/Inter-Black.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-Bold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Bold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Bold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Bold.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-Bold.eot") format("embedded-opentype"),
     url("../fonts/Inter-Bold.ttf") format("truetype"),
     url("../fonts/Inter-Bold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-ExtraBold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-ExtraBold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-ExtraBold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-ExtraBold.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-ExtraBold.eot") format("embedded-opentype"),
     url("../fonts/Inter-ExtraBold.ttf") format("truetype"),
     url("../fonts/Inter-ExtraBold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-Light';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Light.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Light.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Light.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-Light.eot") format("embedded-opentype"),
     url("../fonts/Inter-Light.ttf") format("truetype"),
     url("../fonts/Inter-Light.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-Medium';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Medium.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Medium.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Medium.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-Medium.eot") format("embedded-opentype"),
     url("../fonts/Inter-Medium.ttf") format("truetype"),
     url("../fonts/Inter-Medium.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Regular.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Regular.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-Regular.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-Regular.eot") format("embedded-opentype"),
     url("../fonts/Inter-Regular.ttf") format("truetype"),
     url("../fonts/Inter-Regular.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'Inter-SemiBold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/Inter-SemiBold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-SemiBold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/Inter-SemiBold.woff") format("woff");
-=======
     src: local(""), url("../fonts/Inter-SemiBold.eot") format("embedded-opentype"),
     url("../fonts/Inter-SemiBold.ttf") format("truetype"),
     url("../fonts/Inter-SemiBold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'DMSans-Bold';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Bold.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Bold.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Bold.woff") format("woff");
-=======
     src: local(""), url("../fonts/DMSans-Bold.eot") format("embedded-opentype"),
     url("../fonts/DMSans-Bold.ttf") format("truetype"),
     url("../fonts/DMSans-Bold.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'DMSans-Medium';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Medium.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Medium.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Medium.woff") format("woff");
-=======
     src: local(""), url("../fonts/DMSans-Medium.eot") format("embedded-opentype"),
     url("../fonts/DMSans-Medium.ttf") format("truetype"),
     url("../fonts/DMSans-Medium.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 @font-face {
     font-family: 'DMSans-Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-<<<<<<< HEAD
-    src: local(""), url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Regular.eot") format("embedded-opentype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Regular.ttf") format("truetype"),
-    url("http://demo-project.loc/themes/demo/assets/fonts/DMSans-Regular.woff") format("woff");
-=======
     src: local(""), url("../fonts/DMSans-Regular.eot") format("embedded-opentype"),
     url("../fonts/DMSans-Regular.ttf") format("truetype"),
     url("../fonts/DMSans-Regular.woff") format("woff");
->>>>>>> d5fa1aea875776b40dff7e2af71ca08c341a66d8
 }
 

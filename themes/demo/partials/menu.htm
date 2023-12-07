@@ -3,29 +3,28 @@
 
 
 <nav>
-    <ul
-        class="menu-item text-3xl font-bold max-w-[400px] grid grid-cols-1 max-lg:grid-cols-3 max-lg:gap-x-3 max-lg:max-w-full max-lg:mb-5 max-lg:text-2xl max-md:grid-cols-2 max-smtwo:gap-2 max-smtwo:text-xl">
-        {% for obCategory in obCategoryList %}
+  <ul
+    class="menu-item text-3xl font-bold max-w-[400px] grid grid-cols-1 max-lg:grid-cols-3 max-lg:gap-x-3 max-lg:max-w-full max-lg:mb-5 max-lg:text-2xl max-md:grid-cols-2 max-smtwo:gap-2 max-smtwo:text-xl">
+    {% for obCategory in obCategoryList %}
 
-        <li>
-            {% if this.page.id == 'index' and loop.index == 1 or obCategory.id == obActiveCategory.id %}
-            {% set activeClass = 'activeFirstMenu' %}
-            {% else %}
-            {% set activeClass = '' %}
-            {% endif %}
+    <li>
+      {% if this.page.id == 'index' and loop.index == 1 or obCategory.id == obActiveCategory.id %}
+      {% set activeClass = 'activeFirstMenu' %}
+      {% else %}
+      {% set activeClass = '' %}
+      {% endif %}
 
-            <a href="/catalog/{{obCategory.slug}}#catalog" class=" {{activeClass}}
+      <a href="/catalog/{{obCategory.slug}}#catalog" class=" {{activeClass}}
             menu-item__item flex items-center mb-5 pl-6 py-2.5 max-lg:pl-0 max-smtwo:pl-3 max-smtwo:mb-0
             max-minitwo:py-2 bg-white border-light-orange hover:bg-light-orange hover:duration-500 border-2
             max-md:border border-solid rounded-md">
-                <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8">
-                    <img class="m-auto itemImage" src="{{obCategory.preview_image.path}}" alt="icon" width="21"
-                         height="32" ">
-                </div>
-                {{obCategory.name}}
-            </a>
-        </li>
+        <div class="w-[90px] max-lg:w-16 max-smtwo:w-10 max-smtwo:mr-3 max-minitwo:w-8">
+          <img class="m-auto itemImage" src="{{obCategory.preview_image.path}}" alt="icon" width="28" height="32">
+        </div>
+        {{obCategory.name}}
+      </a>
+    </li>
 
-        {% endfor %}
-    </ul>
+    {% endfor %}
+  </ul>
 </nav>

@@ -141,10 +141,10 @@
     outline: 0;
     transition: 1s;
     transform: translateX(-95%);
+    height: 52px;
     width: 170px;
     border-radius: 40px 0 0 40px;
     z-index: 0;
-    padding-left: 15px;
 }
 
 .search:hover .search-btn,
@@ -153,7 +153,6 @@
     transition: 0.7s;
     background-color: white;
     border-radius: 50px;
-    padding-left: 20px;
 }
 
 @media(max-width: 992px) {
