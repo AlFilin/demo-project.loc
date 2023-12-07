@@ -1,25 +1,26 @@
 <nav class="breadcrumbs {{ wrapperClass }}" role="navigation">
-    <ul class="breadcrumbs__list" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <span itemprop="name">
-                <a class="breadcrumbs__link" href="{{ 'index'|page }}" itemtype="http://schema.org/Thing" itemprop="item">Главная / </a>
-            </span>
-            <meta itemprop="position" content="1" />
-        </li>
-        {% for arItem in arBreadcrumbs %}
-        {% if arItem.active is empty %}
-        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                <span itemprop="name">
-                    <a class="breadcrumbs__link" href="{{ arItem.slug }}" itemtype="http://schema.org/Thing" itemprop="item">{{ arItem.name }}</a>
-                </span>
-            <meta itemprop="position" content="2" />
-        </li>
-        {% else %}
-        <li class="breadcrumbs__item breadcrumbs__item_current">
-            <span class="breadcrumbs__link breadcrumbs__link_current" aria-current="page">{{ arItem.name }}</span>
-        </li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+  <ul class="breadcrumbs__list text-lg" aria-label="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name">
+        <a class="breadcrumbs__link" href="{{ 'index'|page }}" itemtype="http://schema.org/Thing"
+          itemprop="item">Главная / </a>
+      </span>
+      <meta itemprop="position" content="1" />
+    </li>
+    {% for arItem in arBreadcrumbs %}
+    {% if arItem.active is empty %}
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name">
+        <a class="breadcrumbs__link" href="{{ arItem.slug }}" itemtype="http://schema.org/Thing" itemprop="item">{{
+          arItem.name }}</a>
+      </span>
+      <meta itemprop="position" content="2" />
+    </li>
+    {% else %}
+    <li class="breadcrumbs__item breadcrumbs__item_current">
+      <span class="breadcrumbs__link breadcrumbs__link_current" aria-current="page">{{ arItem.name }}</span>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
 </nav>
-
