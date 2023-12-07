@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
+
     src: local(""), url("../fonts/FuturaPT-Bold.eot") format("embedded-opentype"),
     url("../fonts/FuturaPT-Bold.ttf") format("truetype"),
     url("../fonts/FuturaPT-Bold.woff") format("woff");
