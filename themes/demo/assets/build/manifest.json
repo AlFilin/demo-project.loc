@@ -1,6 +1,6 @@
 {
   "src/css/index.css": {
-    "file": "assets/index-c4401fe0.css",
+    "file": "assets/index-3d6d4db5.css",
     "isEntry": true,
     "src": "src/css/index.css"
   },
@@ -238,7 +238,7 @@
     "src": "src/js/commerce.js"
   },
   "src/js/index.js": {
-    "file": "assets/css-4459192c.js",
+    "file": "assets/css-2a2cea2a.js",
     "isEntry": true,
     "src": "src/js/index.js"
   },

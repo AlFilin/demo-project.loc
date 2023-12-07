@@ -3,7 +3,7 @@
         'name' => 'october/october',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '26f4525268977d4413c5313b2782959a3744f9e8',
+        'reference' => '07f03623bac243d0455541e767b80ba800783357',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -832,7 +832,7 @@
         'october/october' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '26f4525268977d4413c5313b2782959a3744f9e8',
+            'reference' => '07f03623bac243d0455541e767b80ba800783357',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1075,8 +1075,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0.0 || 2.0.0 || 3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '1.0.0 || 2.0.0 || 3.0.0',
             ),
         ),
         'psr/simple-cache' => array(

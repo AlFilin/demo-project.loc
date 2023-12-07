@@ -1,5 +1,8 @@
-name: Demo
-description: 'Demo October CMS theme. Demonstrates the basic concepts of the front-end theming: layouts, pages, partials, components, content blocks, AJAX framework.'
-author: October CMS
-homepage: 'http://octobercms.com'
+name: mebel-loft
+description: 'Отличный сайт'
+author: Web-studio-51
+homepage: 'https://sever-loftmebel.ru/'
+authorCode: ''
 code: ''
+parent: ''
+database: '0'

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit78672bdce253cee327efd54b9ae11b0d
+class ComposerStaticInit56da4756b316ef3937d88997b6ac02c5
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -391,8 +391,8 @@ class ComposerStaticInit78672bdce253cee327efd54b9ae11b0d
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -618,24 +618,24 @@ class ComposerStaticInit78672bdce253cee327efd54b9ae11b0d
         array (
             'Kharanenka\\Scope\\' => 
             array (
-                0 => __DIR__ . '/..' . '/kharanenka/laravel-scope-active/src',
-                1 => __DIR__ . '/..' . '/kharanenka/laravel-scope-category-belongs-to/src',
-                2 => __DIR__ . '/..' . '/kharanenka/laravel-scope-code/src',
-                3 => __DIR__ . '/..' . '/kharanenka/laravel-scope-date/src',
-                4 => __DIR__ . '/..' . '/kharanenka/laravel-scope-external-id/src',
+                0 => __DIR__ . '/..' . '/kharanenka/laravel-scope-user-belongs-to/src',
+                1 => __DIR__ . '/..' . '/kharanenka/laravel-scope-type/src',
+                2 => __DIR__ . '/..' . '/kharanenka/laravel-scope-slug/src',
+                3 => __DIR__ . '/..' . '/kharanenka/laravel-scope-name/src',
+                4 => __DIR__ . '/..' . '/kharanenka/laravel-scope-moderation/src',
                 5 => __DIR__ . '/..' . '/kharanenka/laravel-scope-hidden/src',
-                6 => __DIR__ . '/..' . '/kharanenka/laravel-scope-moderation/src',
-                7 => __DIR__ . '/..' . '/kharanenka/laravel-scope-name/src',
-                8 => __DIR__ . '/..' . '/kharanenka/laravel-scope-slug/src',
-                9 => __DIR__ . '/..' . '/kharanenka/laravel-scope-type/src',
-                10 => __DIR__ . '/..' . '/kharanenka/laravel-scope-user-belongs-to/src',
+                6 => __DIR__ . '/..' . '/kharanenka/laravel-scope-external-id/src',
+                7 => __DIR__ . '/..' . '/kharanenka/laravel-scope-date/src',
+                8 => __DIR__ . '/..' . '/kharanenka/laravel-scope-code/src',
+                9 => __DIR__ . '/..' . '/kharanenka/laravel-scope-category-belongs-to/src',
+                10 => __DIR__ . '/..' . '/kharanenka/laravel-scope-active/src',
             ),
             'Kharanenka\\Helper\\' => 
             array (
-                0 => __DIR__ . '/..' . '/kharanenka/laravel-cache-helper/src',
-                1 => __DIR__ . '/..' . '/kharanenka/oc-data-file-model/src',
-                2 => __DIR__ . '/..' . '/kharanenka/oc-pagination/src',
-                3 => __DIR__ . '/..' . '/kharanenka/php-pagination/src',
+                0 => __DIR__ . '/..' . '/kharanenka/php-pagination/src',
+                1 => __DIR__ . '/..' . '/kharanenka/oc-pagination/src',
+                2 => __DIR__ . '/..' . '/kharanenka/oc-data-file-model/src',
+                3 => __DIR__ . '/..' . '/kharanenka/laravel-cache-helper/src',
             ),
         ),
     );
@@ -1433,10 +1433,10 @@ class ComposerStaticInit78672bdce253cee327efd54b9ae11b0d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit78672bdce253cee327efd54b9ae11b0d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit78672bdce253cee327efd54b9ae11b0d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit78672bdce253cee327efd54b9ae11b0d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit78672bdce253cee327efd54b9ae11b0d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit56da4756b316ef3937d88997b6ac02c5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit56da4756b316ef3937d88997b6ac02c5::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit56da4756b316ef3937d88997b6ac02c5::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit56da4756b316ef3937d88997b6ac02c5::$classMap;
 
         }, null, ClassLoader::class);
     }

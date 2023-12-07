@@ -81,6 +81,7 @@ class Pagination extends ComponentBase
         if ($iPage < 1) {
             $iPage = 1;
         }
+
         return $iPage;
     }
 
