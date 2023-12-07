@@ -42,17 +42,23 @@ use lovata\shopaholic\models\Product;
 use lovata\shopaholic\models\Category;
 
 public function onInit(){
-$obCategory = $this->CategoryPage->get();
-$sActiveSorting = $this->ProductList->getSorting();
-$iPage = $this->Pagination->getPageFromRequest();
-$obCategoryProductList = $this->ProductList->make()->active()->sort($sActiveSorting)->category($obCategory->id);
-$arProductList = $obCategoryProductList->page($iPage, $this->Pagination->getCountPerPage());
+    $obCategory = $this->CategoryPage->get();
+$sActiveSorting = isset($this->ProductList) ? $this->ProductList->getSorting() : null;
+$iPage = isset($this->Pagination) ? $this->Pagination->getPageFromRequest() : 1;
 
-$this['obCategory'] = $obCategory;
-$this['sActiveSorting'] = $sActiveSorting;
+if (isset($obCategory) && isset($this->ProductList)) {
+$obCategoryProductList = $this->ProductList->make()->active()->sort($sActiveSorting)->category($obCategory->id);
+$arProductList = $obCategoryProductList->page($iPage, isset($this->Pagination) ? $this->Pagination->getCountPerPage() : 10);
+} else {
+$arProductList = []; // или другое подходящее значение по умолчанию
+}
+
+$this['obCategory'] = $obCategory ?? null;
+$this['sActiveSorting'] = $sActiveSorting ?? null;
 $this['iPage'] = $iPage;
 $this['obProductList'] = $arProductList;
 }
+
 
 public function onAddToCart(){
     $quantity = 1;

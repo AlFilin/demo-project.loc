@@ -1,6 +1,6 @@
 {
   "src/css/index.css": {
-    "file": "assets/index-2b738587.css",
+    "file": "assets/index-c4401fe0.css",
     "isEntry": true,
     "src": "src/css/index.css"
   },
@@ -233,18 +233,23 @@
     "src": "src/fonts/Pollock1c.woff"
   },
   "src/js/commerce.js": {
-    "file": "assets/commerce-48484bdf.js",
+    "file": "assets/commerce-59691cc7.js",
     "isEntry": true,
     "src": "src/js/commerce.js"
   },
   "src/js/index.js": {
-    "file": "assets/css-ac4a0a7c.js",
+    "file": "assets/css-4459192c.js",
     "isEntry": true,
     "src": "src/js/index.js"
   },
   "src/js/order.js": {
-    "file": "assets/order-74d9d7f0.js",
+    "file": "assets/order-259a7344.js",
     "isEntry": true,
     "src": "src/js/order.js"
+  },
+  "src/js/search.js": {
+    "file": "assets/search-e3bc4025.js",
+    "isEntry": true,
+    "src": "src/js/search.js"
   }
 }
