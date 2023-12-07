@@ -1,182 +1,123 @@
-{% set obCartPositionList = Cart.get() %}
-{% set iCountPosition = Cart.get().count() %}
-{% set obTotalPriceData = Cart.getTotalPriceData() %}
-{% set obActiveShippingType = ShippingTypeList.make().active().sort().first() %}
-{% set obShippingTypeList = ShippingTypeList.make().sort().active() %}
-{% set obPaymentMethodList = PaymentMethodList.make().sort().active() %}
-{% if obCartPositionList.isNotEmpty() %}
-{% set arBreadcrumbs = [
-{'active': true, 'name': 'Корзина' }
-] %}
-
-<section class="max-w-site m-0 m-auto  _shopaholic-order-form needs-validation _ajax_create_order" id="cart"
-         data-request="onSubmit" data-request-validated aria-labelledby="cart-order-info" role="group">
-    <form action="" id="orderForm" class="_shopaholic-order-form needs-validation _ajax_create_order">
-  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20 mx-5 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10
-   cart cart__order cart__section">
-      {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs   %}
-
-      <div class="flex items-center mb-20 max-mdtwo:flex-col max-mdtwo:items-start">
-      <h2 class="ml-5 mr-16 text-5xl font-inter font-medium max-xl:text-4xl">Корзина</h2>
-      <span class="h-2 bg-brown w-full max-mdtwo:h-1"></span>
+<section class="max-w-site m-0 m-auto" id="corzina">
+  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20 mx-5 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10">
+    <div class="flex items-center mb-20 max-md:flex-col max-md:items-start">
+      <h2 class="ml-5 mr-16 text-5xl font-inter font-medium max-xl:text-4xl max-mdtwo:mr-5 max-md:mb-3">Корзина</h2>
+      <span class="h-2 bg-brown w-full max-md:h-1"></span>
     </div>
     <div class="grid grid-cols-[auto_385px] mb-20 max-lg:grid-cols-1">
-      <div class="mr-32 max-1.3xl:mr-10 max-lg:mr-0 max-lg:mb-10 cart__order-list cart__list">
-        <p class="ml-8 mb-16 text-xl font-light text-light-grey-blue">В корзине <span class="countPosition">{{iCountPosition}}</span> <span class="countPositionWord">предмета</span></p>
-          {% for obProductCartPosition in obCartPositionList %}
-          {% set obProduct = ProductData.get(obProductCartPosition.item_id) %}
-          {% set obOffer = obProduct.offer.first() %}
-        <div class="flex justify-between pb-6 max-smtwo:flex-col-reverse _shopaholic-product-wrapper" data-position-id="{{ obProductCartPosition.id }}"
-             data-offer-id="{{ obOffer.id }}" data-offer_id="{{ obOffer.id }}" >
-          <div class="flex"  >
-            <img class="max-h-[150px]" src="{{obProduct.preview_image.path}}" alt="{{obProduct.name}}">
+      <div class="mr-32 max-1.3xl:mr-10 max-lg:mr-0 max-lg:mb-10">
+        <p class="ml-6 mb-16 text-xl font-light text-light-grey-blue">В корзине 2 предмета</p>
+        <div class="flex justify-between pb-6 max-smtwo:flex-col-reverse">
+          <div class="flex">
+            <img class="max-h-[150px]" src="/themes/demo/assets/images/corzina1.png" alt="товар">
             <div>
-              <h2 class="text-2xl font-light text-blue mb-3">{{obProduct.name}}</h2>
-              <div class="flex mb-7 max-minitwo:mb-3">
+              <h2 class="text-2xl font-light text-blue mb-3">Стул красивый</h2>
+              <div class="flex items-end mb-7 max-minitwo:mb-3">
                 <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
                 <p class="text-xl font-light text-blue">Белый</p>
               </div>
-
-                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0 cart-product__quantity">
-                  <button class="quantity-btn quantity-btn-minus ml-4 cart-product__change-btn
-                  cart-product__change-btn_decrease _shopaholic-cart-decrease-quantity"
-                          type="button"  aria-label="Decrease quantity"
-                          >-</button>
-                  <input type="text" class="quantity-input cart-product__quantity-input _shopaholic-cart-quantity"
-                         id="{{ id }}"  type="text" min="1" step="1"
-                         max="{{ obOffer.quantity }}" name="quantity"
-                         value="{{ obProductCartPosition.quantity }}"  >
-                  <button class="quantity-btn quantity-btn-plus mr-4 cart-product__change-btn cart-product__change-btn_increase
-                  _shopaholic-cart-increase-quantity"   aria-label="Increase quantity"   type="button"
-
-
-                     >+</button>
+              <form class="flex mb-2.5 max-minitwo:flex-col" action="" method="post">
+                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0">
+                  <button class="quantity-btn quantity-btn-minus ml-4">-</button>
+                  <input type="text" class="quantity-input" value="1" readonly>
+                  <button class="quantity-btn quantity-btn-plus mr-4">+</button>
                 </div>
-                <button class="text-base font-light text-Imperial-Red cart-product__remove"
-                        data-offer-id="{{obOffer.id}}">
-                    Удалить</button>
-                <input type="hidden" name='offer_id' value={{ obOffer.id }}>
-
+                <button class="text-base font-light text-Imperial-Red">Удалить</button>
+              </form>
             </div>
           </div>
-
-          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5" >
-              <span class=" cart-product__price-value _shopaholic-cart" data-group="position" data-field="price"  role="presentation"">{{obProductCartPosition.price}} </span> рублей
-          </p>
+          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5">4429 рублей</p>
         </div>
-          {% endfor %}
-
-          <!--        <span class="block h-0.5 max-w-[820px] bg-French-Grey ml-20 mb-6"></span>-->
-<!--        <div class="flex justify-between max-smtwo:flex-col-reverse">-->
-<!--          <div class="flex">-->
-<!--            <img class="max-h-[150px]" src="/themes/demo/assets/images/corzina2.png" alt="товар">-->
-<!--            <div>-->
-<!--              <h2 class="text-2xl font-light text-blue mb-3">Стул зеленый</h2>-->
-<!--              <div class="flex mb-7 max-minitwo:mb-3">-->
-<!--                <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>-->
-<!--                <p class="text-xl font-light text-blue">Зеленый</p>-->
-<!--              </div>-->
-<!--              <form class="flex mb-2.5 max-minitwo:flex-col" action="" method="post">-->
-<!--                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0">-->
-<!--                  <button class="quantity-btn quantity-btn-minus ml-4">-</button>-->
-<!--                  <input type="text" class="quantity-input" value="1" readonly>-->
-<!--                  <button class="quantity-btn quantity-btn-plus mr-4">+</button>-->
-<!--                </div>-->
-<!--                <button class="text-base font-light text-Imperial-Red">Удалить</button>-->
-<!--              </form>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5">5222 рубля</p>-->
+        <span class="block h-0.5 max-w-[820px] bg-French-Grey ml-20 mb-6"></span>
+        <div class="flex justify-between max-smtwo:flex-col-reverse">
+          <div class="flex">
+            <img class="max-h-[150px]" src="/themes/demo/assets/images/corzina2.png" alt="товар">
+            <div>
+              <h2 class="text-2xl font-light text-blue mb-3">Стул зеленый</h2>
+              <div class="flex items-end mb-7 max-minitwo:mb-3">
+                <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
+                <p class="text-xl font-light text-blue">Зеленый</p>
+              </div>
+              <form class="flex mb-2.5 max-minitwo:flex-col" action="" method="post">
+                <div class="quantity mr-6 max-minitwo:mb-2 max-minitwo:mr-0">
+                  <button class="quantity-btn quantity-btn-minus ml-4">-</button>
+                  <input type="text" class="quantity-input" value="1" readonly>
+                  <button class="quantity-btn quantity-btn-plus mr-4">+</button>
+                </div>
+                <button class="text-base font-light text-Imperial-Red">Удалить</button>
+              </form>
+            </div>
+          </div>
+          <p class="text-xl font-light text-blue mr-16 max-1.5lg:mr-5 max-sm:ml-7 max-sm:mb-5">5222 рубля</p>
         </div>
         <a href="/catalog#catalog" class="max-lg:hidden">
-          <button class="mt-16 text-xl text-white bg-brown-header p-5 border border-brown ml-8"><span
-              class="text-brown text-2xl">%</span>Дополнительная скидка при заказе от <span class="font-bold">30.000
+          <button class="mt-16 text-xl text-white bg-brown-header p-5 border border-brown ml-8">6% кешбек рублями при
+            заказе от <span class="font-bold">30.000
               рублей</span></button>
         </a>
       </div>
-
-
-
-      <div class="text-xl text-blue font-light max-lg:grid max-lg:grid-cols-2 max-md:grid-cols-1 cart__section cart__total">
-        <ul class="w-96 p-7 bg-white border-2 border-French-Grey max-lg:w-full cart__total-ajax-wrapper">
+      <div class="text-xl text-blue font-light">
+        <ul class="w-96 p-7 bg-white border-2 border-French-Grey max-lg:w-full">
           <h2 class="mb-7 font-bold">Стоимость:</h2>
           <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
             <p>Стоимость покупок:</p>
             <p>319.98 рублей</p>
           </li>
-<!--          <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">-->
-<!--            <p>Скидка</p>-->
-<!--            <p>423 рубля</p>-->
-<!--          </li>-->
-          <li class="flex justify-between items-center max-minitwo:flex-col max-minitwo:items-start pb-7 mb-7 border-b border-b-French-Grey">
+          <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
+            <p>Скидка</p>
+            <p>423 рубля</p>
+          </li>
+          <li
+            class="flex justify-between items-center max-minitwo:flex-col max-minitwo:items-start pb-7 mb-7 border-b border-b-French-Grey">
             <p>Доставка</p>
             <p class="text-brown-header font-normal">Бесплатно</p>
           </li>
           <li class="flex justify-between items-center mb-6 max-minitwo:flex-col max-minitwo:items-start">
             <p>Итоговая стоимость</p>
-              {% partial 'product/cart/cart-total-result' obTotalPriceData=obTotalPriceData %}
-            <p class="font-normal"> рублей</p>
+            <p class="font-normal">28812 рублей</p>
           </li>
-          <div class="flex justify-end">
-          <button
-            class="text-white py-3 w-full text-2xl max-lg:w-2/3 max-sm:text-xl bg-button border rounded-md font-light
-            hover:border-brown hover:underline hover:duration-300" id="addOrder" type="button" >
-              Оформить
-            заказ</button>
+          <div class="flex justify-between max-md:justify-center">
+            <a href="/catalog" class="hidden max-lg:block max-md:hidden">
+              <button class="text-lg text-white bg-brown-header p-5 max-lg:p-3 border border-brown">6% кешбек рублями
+                при заказе от <span class="font-bold">30.000
+                  рублей</span></button>
+            </a>
+            <button
+              class="text-white py-3 w-full text-2xl max-lg:text-xl max-lg:w-1/3 max-md:w-2/3 max-sm:text-xl bg-button border rounded-md font-light hover:border-brown hover:underline hover:duration-300">Оформить
+              заказ</button>
           </div>
         </ul>
-        <a href="/catalog" class="hidden max-lg:block">
-          <button class="ml-8 max-md:ml-0 max-md:w-full text-xl text-white bg-brown-header p-5 border border-brown"><span
-              class="text-brown text-2xl">% </span> 6% кешбек рублями при заказе от <span class="font-bold">30.000
+        <a href="/catalog" class="hidden max-md:block">
+          <button class="p-3 text-xl max-md:w-full max-minitwo:text-base text-white bg-brown-header border border-brown">6% кешбек рублями при
+            заказе от <span class="font-bold">30.000
               рублей</span></button>
         </a>
       </div>
     </div>
-    <div class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12 max-lg:ml-0 max-smtwo:grid-cols-1 max-smtwo:gap-5" >
-      <input type="text" name="name" id="name"
+    <form class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12 max-lg:ml-0 max-smtwo:grid-cols-1 max-smtwo:gap-5"
+      method="post">
+      <input type="text" name="name"
         class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Имя" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="surname" id="surname"
+      <input type="text" name="name"
         class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Отчество" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="lastname" id="lastname"
+      <input type="text" name="name"
         class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Фамилия" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="phone" id="phone"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Телефон" required
-        style="background-image: url(/themes/demo/assets/images/phone.svg); background-repeat: no-repeat; background-position: right 28px center;">
-
-      <input type="text" name="email" id="email"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Email" required
-        style="background-image: url(/themes/demo/assets/images/mail.svg); background-repeat: no-repeat; background-position: right 28px center;">
-
-      <input type="text" name="address" id="address"
+      <input type="text" name="name"
         class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Адрес" required
         style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
       <textarea name="text"
         class="col-span-2 h-44 max-smtwo:col-span-1 resize-none border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
         placeholder="Комментарий к заказу"></textarea>
-    </div>
-  </div>
     </form>
+  </div>
 </section>
-{% else %}
-<div class="mt-[110px]">
-    <h2 class="font-bold text-xl text-center">Корзина пуста</h2>
-</div>
-{% endif %}
-
-
-
-<div id="loadingmessage" class="errorMsg errorField" style="display: none;">
-    Вы не заполнили обязательные поля
-</div>
