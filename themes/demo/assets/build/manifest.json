@@ -1,12 +1,250 @@
 {
   "src/css/index.css": {
-    "file": "assets/index-73006c91.css",
+    "file": "assets/index-2b738587.css",
     "isEntry": true,
     "src": "src/css/index.css"
   },
+  "src/fonts/DMSans-Bold.eot": {
+    "file": "assets/DMSans-Bold-ecd9d1f3.eot",
+    "src": "src/fonts/DMSans-Bold.eot"
+  },
+  "src/fonts/DMSans-Bold.ttf": {
+    "file": "assets/DMSans-Bold-9d801f8a.ttf",
+    "src": "src/fonts/DMSans-Bold.ttf"
+  },
+  "src/fonts/DMSans-Medium.eot": {
+    "file": "assets/DMSans-Medium-1e4d9fef.eot",
+    "src": "src/fonts/DMSans-Medium.eot"
+  },
+  "src/fonts/DMSans-Medium.ttf": {
+    "file": "assets/DMSans-Medium-4f6a909d.ttf",
+    "src": "src/fonts/DMSans-Medium.ttf"
+  },
+  "src/fonts/DMSans-Regular.eot": {
+    "file": "assets/DMSans-Regular-9141fbb7.eot",
+    "src": "src/fonts/DMSans-Regular.eot"
+  },
+  "src/fonts/DMSans-Regular.ttf": {
+    "file": "assets/DMSans-Regular-1adb096a.ttf",
+    "src": "src/fonts/DMSans-Regular.ttf"
+  },
+  "src/fonts/FuturaPT-Bold.eot": {
+    "file": "assets/FuturaPT-Bold-60ae14c3.eot",
+    "src": "src/fonts/FuturaPT-Bold.eot"
+  },
+  "src/fonts/FuturaPT-Bold.ttf": {
+    "file": "assets/FuturaPT-Bold-9aa752cb.ttf",
+    "src": "src/fonts/FuturaPT-Bold.ttf"
+  },
+  "src/fonts/FuturaPT-Bold.woff": {
+    "file": "assets/FuturaPT-Bold-a60c08d4.woff",
+    "src": "src/fonts/FuturaPT-Bold.woff"
+  },
+  "src/fonts/FuturaPT-Book.eot": {
+    "file": "assets/FuturaPT-Book-923e594b.eot",
+    "src": "src/fonts/FuturaPT-Book.eot"
+  },
+  "src/fonts/FuturaPT-Book.ttf": {
+    "file": "assets/FuturaPT-Book-8f87a745.ttf",
+    "src": "src/fonts/FuturaPT-Book.ttf"
+  },
+  "src/fonts/FuturaPT-Book.woff": {
+    "file": "assets/FuturaPT-Book-b4d73175.woff",
+    "src": "src/fonts/FuturaPT-Book.woff"
+  },
+  "src/fonts/FuturaPT-Demi.eot": {
+    "file": "assets/FuturaPT-Demi-87278183.eot",
+    "src": "src/fonts/FuturaPT-Demi.eot"
+  },
+  "src/fonts/FuturaPT-Demi.ttf": {
+    "file": "assets/FuturaPT-Demi-afc88339.ttf",
+    "src": "src/fonts/FuturaPT-Demi.ttf"
+  },
+  "src/fonts/FuturaPT-Demi.woff": {
+    "file": "assets/FuturaPT-Demi-58ed1f03.woff",
+    "src": "src/fonts/FuturaPT-Demi.woff"
+  },
+  "src/fonts/FuturaPT-ExtraBold.eot": {
+    "file": "assets/FuturaPT-ExtraBold-c3dd45e6.eot",
+    "src": "src/fonts/FuturaPT-ExtraBold.eot"
+  },
+  "src/fonts/FuturaPT-ExtraBold.ttf": {
+    "file": "assets/FuturaPT-ExtraBold-70d6becb.ttf",
+    "src": "src/fonts/FuturaPT-ExtraBold.ttf"
+  },
+  "src/fonts/FuturaPT-ExtraBold.woff": {
+    "file": "assets/FuturaPT-ExtraBold-ea64c142.woff",
+    "src": "src/fonts/FuturaPT-ExtraBold.woff"
+  },
+  "src/fonts/FuturaPT-Heavy.eot": {
+    "file": "assets/FuturaPT-Heavy-0ae33f3e.eot",
+    "src": "src/fonts/FuturaPT-Heavy.eot"
+  },
+  "src/fonts/FuturaPT-Heavy.ttf": {
+    "file": "assets/FuturaPT-Heavy-7f424bac.ttf",
+    "src": "src/fonts/FuturaPT-Heavy.ttf"
+  },
+  "src/fonts/FuturaPT-Heavy.woff": {
+    "file": "assets/FuturaPT-Heavy-6e9aedf3.woff",
+    "src": "src/fonts/FuturaPT-Heavy.woff"
+  },
+  "src/fonts/FuturaPT-Light.eot": {
+    "file": "assets/FuturaPT-Light-910c59ef.eot",
+    "src": "src/fonts/FuturaPT-Light.eot"
+  },
+  "src/fonts/FuturaPT-Light.ttf": {
+    "file": "assets/FuturaPT-Light-0101f8b1.ttf",
+    "src": "src/fonts/FuturaPT-Light.ttf"
+  },
+  "src/fonts/FuturaPT-Light.woff": {
+    "file": "assets/FuturaPT-Light-e26b7467.woff",
+    "src": "src/fonts/FuturaPT-Light.woff"
+  },
+  "src/fonts/FuturaPT-Medium.eot": {
+    "file": "assets/FuturaPT-Medium-1081d748.eot",
+    "src": "src/fonts/FuturaPT-Medium.eot"
+  },
+  "src/fonts/FuturaPT-Medium.ttf": {
+    "file": "assets/FuturaPT-Medium-f00fac1e.ttf",
+    "src": "src/fonts/FuturaPT-Medium.ttf"
+  },
+  "src/fonts/FuturaPT-Medium.woff": {
+    "file": "assets/FuturaPT-Medium-d380dbb1.woff",
+    "src": "src/fonts/FuturaPT-Medium.woff"
+  },
+  "src/fonts/Inter-Black.eot": {
+    "file": "assets/Inter-Black-c2f0fecb.eot",
+    "src": "src/fonts/Inter-Black.eot"
+  },
+  "src/fonts/Inter-Black.ttf": {
+    "file": "assets/Inter-Black-c6d377e8.ttf",
+    "src": "src/fonts/Inter-Black.ttf"
+  },
+  "src/fonts/Inter-Black.woff": {
+    "file": "assets/Inter-Black-1216e465.woff",
+    "src": "src/fonts/Inter-Black.woff"
+  },
+  "src/fonts/Inter-Bold.eot": {
+    "file": "assets/Inter-Bold-55453736.eot",
+    "src": "src/fonts/Inter-Bold.eot"
+  },
+  "src/fonts/Inter-Bold.ttf": {
+    "file": "assets/Inter-Bold-2686d36a.ttf",
+    "src": "src/fonts/Inter-Bold.ttf"
+  },
+  "src/fonts/Inter-Bold.woff": {
+    "file": "assets/Inter-Bold-7b717b7f.woff",
+    "src": "src/fonts/Inter-Bold.woff"
+  },
+  "src/fonts/Inter-ExtraBold.eot": {
+    "file": "assets/Inter-ExtraBold-a4b3b797.eot",
+    "src": "src/fonts/Inter-ExtraBold.eot"
+  },
+  "src/fonts/Inter-ExtraBold.ttf": {
+    "file": "assets/Inter-ExtraBold-d4eb4efe.ttf",
+    "src": "src/fonts/Inter-ExtraBold.ttf"
+  },
+  "src/fonts/Inter-ExtraBold.woff": {
+    "file": "assets/Inter-ExtraBold-e308949b.woff",
+    "src": "src/fonts/Inter-ExtraBold.woff"
+  },
+  "src/fonts/Inter-Light.eot": {
+    "file": "assets/Inter-Light-9950c3ab.eot",
+    "src": "src/fonts/Inter-Light.eot"
+  },
+  "src/fonts/Inter-Light.ttf": {
+    "file": "assets/Inter-Light-57f613b0.ttf",
+    "src": "src/fonts/Inter-Light.ttf"
+  },
+  "src/fonts/Inter-Light.woff": {
+    "file": "assets/Inter-Light-74afc62a.woff",
+    "src": "src/fonts/Inter-Light.woff"
+  },
+  "src/fonts/Inter-Medium.eot": {
+    "file": "assets/Inter-Medium-49f55174.eot",
+    "src": "src/fonts/Inter-Medium.eot"
+  },
+  "src/fonts/Inter-Medium.ttf": {
+    "file": "assets/Inter-Medium-05d1d970.ttf",
+    "src": "src/fonts/Inter-Medium.ttf"
+  },
+  "src/fonts/Inter-Medium.woff": {
+    "file": "assets/Inter-Medium-bf585fd8.woff",
+    "src": "src/fonts/Inter-Medium.woff"
+  },
+  "src/fonts/Inter-Regular.eot": {
+    "file": "assets/Inter-Regular-378622a2.eot",
+    "src": "src/fonts/Inter-Regular.eot"
+  },
+  "src/fonts/Inter-Regular.ttf": {
+    "file": "assets/Inter-Regular-bd39ef0f.ttf",
+    "src": "src/fonts/Inter-Regular.ttf"
+  },
+  "src/fonts/Inter-Regular.woff": {
+    "file": "assets/Inter-Regular-49a22467.woff",
+    "src": "src/fonts/Inter-Regular.woff"
+  },
+  "src/fonts/Inter-SemiBold.eot": {
+    "file": "assets/Inter-SemiBold-6fcd14b6.eot",
+    "src": "src/fonts/Inter-SemiBold.eot"
+  },
+  "src/fonts/Inter-SemiBold.ttf": {
+    "file": "assets/Inter-SemiBold-2cc9e056.ttf",
+    "src": "src/fonts/Inter-SemiBold.ttf"
+  },
+  "src/fonts/Inter-SemiBold.woff": {
+    "file": "assets/Inter-SemiBold-dce7368a.woff",
+    "src": "src/fonts/Inter-SemiBold.woff"
+  },
+  "src/fonts/Lobster-Regular.eot": {
+    "file": "assets/Lobster-Regular-9ed947c9.eot",
+    "src": "src/fonts/Lobster-Regular.eot"
+  },
+  "src/fonts/Lobster-Regular.ttf": {
+    "file": "assets/Lobster-Regular-d6568e69.ttf",
+    "src": "src/fonts/Lobster-Regular.ttf"
+  },
+  "src/fonts/Lobster-Regular.woff": {
+    "file": "assets/Lobster-Regular-16d91ffb.woff",
+    "src": "src/fonts/Lobster-Regular.woff"
+  },
+  "src/fonts/Morice-Bejar.eot": {
+    "file": "assets/Morice-Bejar-2d39b817.eot",
+    "src": "src/fonts/Morice-Bejar.eot"
+  },
+  "src/fonts/Morice-Bejar.ttf": {
+    "file": "assets/Morice-Bejar-9a25cf30.ttf",
+    "src": "src/fonts/Morice-Bejar.ttf"
+  },
+  "src/fonts/Morice-Bejar.woff": {
+    "file": "assets/Morice-Bejar-c3e88cca.woff",
+    "src": "src/fonts/Morice-Bejar.woff"
+  },
+  "src/fonts/Pollock1c.eot": {
+    "file": "assets/Pollock1c-d37c416d.eot",
+    "src": "src/fonts/Pollock1c.eot"
+  },
+  "src/fonts/Pollock1c.ttf": {
+    "file": "assets/Pollock1c-cecc93cb.ttf",
+    "src": "src/fonts/Pollock1c.ttf"
+  },
+  "src/fonts/Pollock1c.woff": {
+    "file": "assets/Pollock1c-ef036116.woff",
+    "src": "src/fonts/Pollock1c.woff"
+  },
+  "src/js/commerce.js": {
+    "file": "assets/commerce-48484bdf.js",
+    "isEntry": true,
+    "src": "src/js/commerce.js"
+  },
   "src/js/index.js": {
-    "file": "assets/css-940e46dc.js",
+    "file": "assets/css-ac4a0a7c.js",
     "isEntry": true,
     "src": "src/js/index.js"
+  },
+  "src/js/order.js": {
+    "file": "assets/order-74d9d7f0.js",
+    "isEntry": true,
+    "src": "src/js/order.js"
   }
 }
