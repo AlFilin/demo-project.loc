@@ -1,0 +1,16 @@
+<ul class=" catalog-list grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg">
+
+    {% if obProductList is not empty %}
+    {% for obProduct in obProductList %}
+    {% set obOffer = obProduct.offer.first() %}
+    {% partial 'product-card' %}
+    {% endfor %}
+</ul>
+{% else %}
+<ul class=" catalog-list grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg">
+
+{% set obProductList = ProductList.make().active().category(22).take() %}
+
+{% endif %}
+</ul>
+{% partial 'pagination' %}

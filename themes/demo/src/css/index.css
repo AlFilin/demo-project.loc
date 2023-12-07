@@ -1,9 +1,60 @@
 @import './font.css';
 @import './header.css';
+@import './menu.css';
 @import './faq.css';
-@import './corzina.css';
+@import './cart.css';
 @import './product-card.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.activeFirstMenu{
+    background-color: rgba(202, 97, 0, 0.40);
+}
+.productCard img.inProduct {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* чтобы картинка не мешала взаимодействию с .productCard */
+}
+
+.productCard:hover img.inProduct {
+    opacity: 1;
+}
+.errorMsg {
+    background-color: #d24bb7;
+    padding: 5px 50px;
+    display: block;
+    margin: auto;
+    transition: 1s;
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 999999999999;
+    color: white;
+}
+dialog {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#closeBtn {
+    float: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#policy {
+    font-size: 0.8em;
+    margin-top: 20px;
+}

@@ -1,0 +1,56 @@
+<section class="max-w-site m-0 m-auto pt-20 mb-24 mx-5 max-xl:pt-12 max-smtwo:mb-10">
+  <div class="max-w-block m-0 m-auto font-futura">
+    <div
+      class="grid grid-cols-[400px_auto] items-center mb-20 max-smtwo:flex max-smtwo:flex-col max-smtwo:items-start max-smtwo:mb-10">
+      <h2 class="text-5xl font-inter font-medium max-smtwo:text-3xl">Каталог мебели</h2>
+      <span class="h-2 bg-brown w-full max-smtwo:h-1"></span>
+    </div>
+    <div
+      class="grid grid-cols-[400px_auto] justify-between max-lg:grid-cols-1 max-1.5lg:grid-cols-[330px_auto] max-lg:grid-cols-1">
+      <div class="blog-nav mr-10 max-lg:mr-0">
+        <!-- <div class="blog-nav-button">
+          <button class="blog-nav__btn">Категории</button>
+          <button class="blog-nav__close">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30435)"
+                fill="#999999" />
+              <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30432 15.5524)"
+                fill="#999999" />
+              <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2" />
+            </svg>
+          </button>
+        </div> -->
+          {% partial 'menu' %}
+      </div>
+      <div class="max-w-[1096px]">
+        <ul
+          class="grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-smtwo:mb-7 max-mini:text-lg">
+            {% if obProductList is not empty %}
+            {% for obProduct in obProductList %}
+            {% set obOffer = obProduct.offer.first() %}
+            {% partial 'product-card' %}
+            {% endfor %}
+        </ul>
+          {% else %}
+          В данной категории нет товаров</p>
+          {% endif %}
+        </ul>
+          {% partial 'pagination' iCount=iCount iPage=iPage %}
+        <div class="flex justify-between max-xl:justify-evenly max-smtwo:flex-col max-smtwo:items-center">
+          <a href=""
+            class="mb-4 text-xl font-inter text-white px-5 pt-3 bg-button rounded-[10px] border max-smtwo:p-3 max-smtwo:text-lg hover:border-brown hover:underline hover:duration-300">Показать
+            все
+            товары категории</a>
+          <div>
+            <button class="mr-5 rounded-full hover:bg-white hover:duration-300">
+              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера1.svg" alt="button">
+            </button>
+            <button class="rounded-full hover:bg-white hover:duration-300">
+              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера2.svg" alt="button">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

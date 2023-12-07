@@ -26,6 +26,9 @@ skip_error = 1
 [ProductList]
 sorting = "no"
 ==
+use lovata\shopaholic\models\Product;
+use lovata\shopaholic\models\Category;
+
 function onInit() {
 $obProductItem = $this->ProductPage->get();
 $obCategoryItem = $this->CategoryPage->get();
@@ -33,13 +36,35 @@ $obMainCategoryItem = $this->MainCategoryPage->get();
 if (!empty($this->param('slug')) && empty($obProductItem) && empty($obCategoryItem)) {
 return $this->ProductPage->getErrorResponse();
 }
-
 $obActiveCategoryItem = !empty($obCategoryItem) ? $obCategoryItem : $obMainCategoryItem;
-
 $this['obProduct'] = $obProductItem;
 $this['obActiveCategory'] = $obActiveCategoryItem;
 $this['relatedProducts'] = $this->ProductList->make()->active()->take(10);
-
 }
+
+
+
+public function onAddToCart(){
+$quantity = 1;
+$productId = post('product_id');
+$sessionCart = Session::get('cart', ['items' => array()]);
+if (isset($sessionCart['items'][$productId])) {
+$sessionCart['items'][$productId]['quantity'] += $quantity;
+}
+else
+{
+$product = Product::find($productId);
+$sessionCart['items'][$productId] = [
+'id'       => $productId,
+'quantity' => $quantity,
+];
+}
+}
+
+
+
+
+
+
 ==
 {% ajaxPartial 'product-page' %}

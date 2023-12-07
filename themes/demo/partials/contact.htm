@@ -1,6 +1,12 @@
+{% set arBreadcrumbs = [
+{'active': true, 'name': 'Контакты' }
+] %}
+
 <section class="max-w-site m-0 m-auto" id="kontakts">
   <div class="max-w-container m-0 m-auto">
-    <div class="max-w-block m-0 m-auto font-futura text-2xl py-32 mx-5 max-md:py-10">
+      {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs   %}
+
+      <div class="max-w-block m-0 m-auto font-futura text-2xl py-32 mx-5 max-md:py-10">
       <div class="grid grid-cols-[250px_auto] items-center mb-20 max-mdtwo:grid-cols-1">
         <h2 class="text-5xl font-inter font-medium">Контакты</h2>
         <span class="h-2 mt-2 bg-brown w-[88%]"></span>

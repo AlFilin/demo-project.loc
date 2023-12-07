@@ -1,3 +1,25 @@
+import ShopaholicProductList from './shopaholic-product-list';
+import ShopaholicSorting from './shopaholic-sorting';
+import ShopaholicPagination  from './shopaholic-pagination';
+
+
+
+const obListHelper = new ShopaholicProductList();
+obListHelper.setAjaxRequestCallback((obRequestData) => {
+    console.log('isorting', obRequestData);
+    obRequestData.update = {'catalog/catalog-ajax': `.catalog_wrapper`};
+
+    return obRequestData;
+});
+
+
+
+const obPaginationHelper = new ShopaholicPagination(obListHelper);
+obPaginationHelper.init();
+
+const obSortingHelper = new ShopaholicSorting(obListHelper);
+obSortingHelper.init();
+
 document.addEventListener("DOMContentLoaded", () => {
     // Добавление в корзину
     document.body.addEventListener('click', function (event) {
