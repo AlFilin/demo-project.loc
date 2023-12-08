@@ -1,0 +1,91 @@
+<section class="max-w-site m-0 m-auto mx-5" id="faq">
+  <div class="max-w-block m-0 m-auto font-futura pt-32 pb-20">
+    <div class="grid grid-cols-[450px_auto] items-center mb-20 max-lg:grid-cols-1">
+      <h2 class="mb-5 text-5xl font-inter font-medium max-lg:w-full max-md:text-3xl">Мебель на заказ</h2>
+      <span class="max-mdtwo:mb-5 h-2 bg-brown max-lg:w-full"></span>
+      {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs %}
+    </div>
+    <div class="rounded-2xl bg-gradient-to-r max-xl:bg-gradient-to-b from-slate-100 to-slate-500">
+      <div class="grid grid-cols-[900px_auto] max-xl:grid-cols-1 p-5"
+        style="background-image: url(/themes/demo/assets/images/решетка.png); background-size: 30%;">
+        <ul
+          class="grid grid-cols-1 mr-10 text-xl rounded-2xl bg-gradient-to-r max-xl:bg-gradient-to-b from-slate-100 to-slate-200/50 max-xl:mb-10 max-xl:mr-0">
+          <li class="p-5">
+            Индивидуальный Дизайн: <br>
+            Закажите мебель лофт, которая полностью соответствует вашему вкусу и потребностям. Мы работаем с опытными
+            дизайнерами, готовыми воплотить ваши идеи в жизнь. Выберите материалы, цветовую гамму, формы и размеры,
+            чтобы
+            создать уникальное и функциональное пространство.
+          </li>
+          <li class="p-5">
+            Персональный Подход: <br>
+            Мы ценим каждого клиента, и именно поэтому предоставляем персональный подход к каждому заказу. Наши мастера
+            ручной
+            работы будут работать с вами на каждом этапе процесса, учитывая ваши предпочтения и предоставляя регулярные
+            обновления, чтобы ваш заказ соответствовал вашим ожиданиям.
+          </li>
+          <li class="p-5">
+            Выбор Материалов: <br>
+            От грубой текстуры металла до теплого прикосновения натурального дерева — у нас есть широкий выбор
+            материалов
+            для
+            создания вашей идеальной мебели.
+          </li>
+          <li class="p-5">
+            Уникальность в Каждой Детали: <br>
+            Мы стремимся к созданию не просто мебели, а произведений искусства, олицетворяющих ваш вкус и стиль жизни.
+          </li>
+          <li class="p-5">
+            Производство с Любовью: <br>
+            Каждая деталь вашей мебели будет изготовлена с любовью и вниманием к деталям.
+          </li>
+          <li class="p-5">
+            Не ограничивайте свои идеи стандартными вариантами. Сделайте заказ на мебель в стиле лофт, которая будет
+            подчеркивать ваш уникальный вкус и стиль. Создайте пространство, в котором вы будете себя комфортно
+            чувствовать и
+            которое будет отражать вашу индивидуальность.
+          </li>
+        </ul>
+        <form
+          class="grid grid-cols-1 gap-5 max-w-md max-xl:grid-cols-3 max-xl:max-w-none max-xl:w-full max-md:grid-cols-2 max-smtwo:grid-cols-1">
+          <input type="text" name="name" id="name"
+            class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Имя" required
+            style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+          <input type="text" name="surname" id="surname"
+            class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Отчество" required
+            style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+          <input type="text" name="lastname" id="lastname"
+            class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Фамилия" required
+            style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+
+          <input type="text" name="phone" id="phone"
+            class="mr-7 border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Телефон" required
+            style="background-image: url(/themes/demo/assets/images/tele.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
+
+          <input type="text" name="email" id="email"
+            class="mr-7 border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Email" required
+            style="background-image: url(/themes/demo/assets/images/email.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
+
+          <input type="text" name="address" id="address"
+            class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Адрес" required
+            style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
+          <textarea name="text"
+            class="max-xl:col-span-2 max-smtwo:col-span-1 resize-none border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
+            placeholder="Комментарий к заказу"></textarea>
+          <button class="text-white py-3 w-full text-2xl max-lg:text-xl max-md:col-start-2 max-smtwo:col-start-1 bg-button border-2 rounded-md font-light
+          hover:border-brown hover:underline hover:duration-300" id="addOrder" type="button">
+            Оформить
+            заказ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

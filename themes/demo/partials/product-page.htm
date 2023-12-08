@@ -13,11 +13,11 @@
         <div class="max-w-xl flex justify-around ml-32 max-lg:flex-col max-lg:items-center max-lg:ml-0">
           <div
             class="foto-prod mt-7 max-1.3xl:mt-16 max-xl:mr-20 max-lg:mr-0 bg-white border border-brown rounded-lg max-lg:mb-5 max">
-            <div class="swiper swiper-foto-prod rounded-3xl">
+            <div class="swiper swiper-foto-prod rounded-lg">
               <div class="swiper-wrapper">
                 {% for slide in obProduct.images %}
                 <div class="swiper-slide swiper-clide-1">
-                  <img class="h-full" src="{{slide.path}}" alt="{{slide.title}}">
+                  <img class="h-full w-full object-cover" src="{{slide.path}}" alt="{{slide.title}}">
                 </div>
                 {% endfor %}
               </div>
