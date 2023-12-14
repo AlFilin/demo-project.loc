@@ -12,7 +12,7 @@
 <section class="max-w-site m-0 m-auto mx-5  _shopaholic-order-form needs-validation _ajax_create_order" id="cart"
   data-request="onSubmit" data-request-validated aria-labelledby="cart-order-info" role="group">
   <form action="" id="orderForm" class="_shopaholic-order-form needs-validation _ajax_create_order pb-20">
-    <div class="max-w-block m-0 m-auto font-futura pt-32 pb-32 pl-20 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10
+    <div class="max-w-block m-0 m-auto font-futura pt-32 pb-20 pl-20 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10
    cart cart__order cart__section">
 
       <div class="grid grid-cols-[300px_auto] items-center mb-20 max-mdtwo:grid-cols-1 max-mdtwo:items-start">
@@ -22,7 +22,7 @@
       </div>
       <div class="grid grid-cols-[auto_385px] mb-10 max-lg:grid-cols-1 max-md:mb-0">
         <div class="mr-32 max-1.3xl:mr-10 max-lg:mr-0 max-lg:mb-10 cart__order-list cart__list">
-          <p class="ml-8 mb-16 text-xl font-light text-light-grey-blue">В корзине <span
+          <p class="mb-16 text-xl font-light text-light-grey-blue">В корзине <span
               class="countPosition">{{iCountPosition}}</span> <span class="countPositionWord">предмета</span></p>
           {% for obProductCartPosition in obCartPositionList %}
           {% set obProduct = ProductData.get(obProductCartPosition.item_id) %}
@@ -31,7 +31,8 @@
             data-position-id="{{ obProductCartPosition.id }}" data-offer-id="{{ obOffer.id }}"
             data-offer_id="{{ obOffer.id }}">
             <div class="flex">
-              <img class="max-h-[160px] mr-10 max-minitwo:mr-3" src="{{obProduct.preview_image.path}}" alt="{{obProduct.name}}">
+              <img class="max-h-[160px] mr-10 max-minitwo:mr-3" src="{{obProduct.preview_image.path}}"
+                alt="{{obProduct.name}}">
               <div>
                 <h2 class="text-2xl font-light text-blue mb-3">{{obProduct.name}}</h2>
                 <div class="flex items-end mb-7 max-minitwo:mb-3">
@@ -125,49 +126,53 @@
         </div>
       </div>
       <a href="/catalog#catalog" class="max-lg:hidden max-md:block">
-        <button class="ml-8 p-5 text-xl max-md:ml-0 max-md:w-full text-white bg-brown-header border border-brown">Дополнительная скидка при заказе
+        <button class="p-5 text-xl max-md:w-full text-white bg-brown-header border border-brown">Дополнительная скидка
+          при заказе
           от <span class="font-bold">30.000
             рублей</span></button>
       </a>
     </div>
-    <div class="grid grid-cols-2 max-w-[1056px] ml-9 gap-12 max-lg:ml-0 max-smtwo:grid-cols-1 max-mdtwo:gap-5 max-smtwo:gap-5">
-      <input type="text" name="name" id="name"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Имя" required
-        style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
+    <div class="max-w-block m-0 m-auto font-futura pl-20 max-1.5xl:pl-0">
+      <div
+        class="grid grid-cols-2 max-w-[1056px] gap-12 max-smtwo:grid-cols-1 max-mdtwo:gap-5 max-smtwo:gap-5">
+        <input type="text" name="name" id="name"
+          class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Имя" required
+          style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="surname" id="surname"
-        class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Отчество" required
-        style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+        <input type="text" name="surname" id="surname"
+          class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Отчество" required
+          style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="lastname" id="lastname"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Фамилия" required
-        style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
+        <input type="text" name="lastname" id="lastname"
+          class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Фамилия" required
+          style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-      <input type="text" name="phone" id="phone"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Телефон" required
-        style="background-image: url(/themes/demo/assets/images/tele.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
+        <input type="text" name="phone" id="phone"
+          class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Телефон" required
+          style="background-image: url(/themes/demo/assets/images/tele.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
-      <input type="text" name="email" id="email"
-        class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Email" required
-        style="background-image: url(/themes/demo/assets/images/email.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
+        <input type="text" name="email" id="email"
+          class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Email" required
+          style="background-image: url(/themes/demo/assets/images/email.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
-      <input type="text" name="address" id="address"
-        class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Адрес" required
-        style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
-      <textarea name="text"
-        class="col-span-2 h-44 max-smtwo:col-span-1 resize-none border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-        placeholder="Комментарий к заказу"></textarea>
+        <input type="text" name="address" id="address"
+          class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Адрес" required
+          style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
+        <textarea name="text"
+          class="col-span-2 h-44 max-smtwo:col-span-1 resize-none border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
+          placeholder="Комментарий к заказу"></textarea>
+      </div>
     </div>
   </form>
 </section>
 {% else %}
-<div class="mt-[110px]">
+<div class="py-[110px]">
   <h2 class="font-bold text-xl text-center">Корзина пуста</h2>
 </div>
 {% endif %}

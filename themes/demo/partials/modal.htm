@@ -1,3 +1,19 @@
+[genericForm]
+rules[name] = "required"
+rules[phone] = "required"
+rules_messages[required] = "Вы не заполнили поле"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+reset_form = 1
+redirect = "/thanks"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
 <dialog class="rounded-2xl" id="modal">
     <form class="text-xl relative p-10 shadow-blok1 text-black rounded-2xl" method="dialog">
         <button id="closeBtn">
