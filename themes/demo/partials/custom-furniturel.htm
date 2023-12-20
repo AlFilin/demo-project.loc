@@ -1,3 +1,6 @@
+{% set arBreadcrumbs = [
+{'active': true, 'name': 'Мебель на заказ' }
+] %}
 <section class="max-w-site m-0 m-auto mx-5" id="faq">
   <div class="max-w-block m-0 m-auto font-futura text-xl pt-32 pb-20">
     <div class="grid grid-cols-[450px_auto] items-center mb-20 max-lg:grid-cols-1">
@@ -9,7 +12,7 @@
       <div class="grid grid-cols-[900px_auto] max-xl:grid-cols-1 p-5 rounded-2xl"
         style="background-image: url(/themes/demo/assets/images/фон-бумага.png); background-size: 30%;">
         <ul
-          class="grid grid-cols-1 mr-10 text-xl rounded-2xl bg-gradient-to-r max-xl:bg-gradient-to-b from-transparent to-slate-200/50 max-xl:mb-10 max-xl:mr-0">
+          class="grid grid-cols-1 mr-10 text-xl rounded-2xl max-xl:mb-10 max-xl:mr-0 bg-white">
           <li class="p-5">
             <h2 class="font-bold text-2xl">Индивидуальный Дизайн:</h2>
             <p>Закажите мебель лофт, которая полностью соответствует вашему вкусу и потребностям. Мы работаем с опытными
@@ -61,7 +64,7 @@
             placeholder="Отчество" required
             style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
-          <input type="text" name="lastname" id="lastname"
+          <input type="text" name="lastname" id="middlename"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
             placeholder="Фамилия" required
             style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
@@ -84,7 +87,7 @@
             class="max-xl:col-span-2 max-smtwo:col-span-1 resize-none border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
             placeholder="Комментарий к заказу"></textarea>
           <button class="text-white py-3 w-full text-2xl max-lg:text-xl max-md:col-start-2 max-smtwo:col-start-1 border-2 border-brown rounded-md
-          hover:bg-gray-600/50 hover:rounded-3xl hover:underline hover:duration-500" id="addOrder" type="button">
+          hover:bg-gray-600/50 hover:rounded-3xl hover:underline duration-500" id="addOrder" type="button">
             Оформить
             заказ</button>
         </form>

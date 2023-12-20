@@ -40,18 +40,7 @@
         {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs   %}
     </div>
 
-        <form
-            class="flex justify-center items-center text-2xl mb-20 mr-9 max-sm:flex-col max-sm:mb-8 max-sm:items-start"
-            action="" method="post">
-            <label class="mr-16 font-inter max-smtwo:mr-10 max-sm:mb-5" for="sorting">Сортировать:</label>
-            <select
-                class="_shopaholic-sorting w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[200px] bg-right-1 text-text-gray/50 text-2xl  hover:text-brown focus:text-brown focus:ring-brown focus:border-brown"
-                name="sorting" id="sorting">
-                <option value="price|asc">По алфавиту</option>
-                <option value="price|desc">По цене</option>
-                <option  value="popularity|desc">По популярности</option>
-            </select>
-        </form>
+
         <div class="grid grid-cols-[400px_auto] max-lg:grid-cols-1 max-1.5lg:grid-cols-[330px_auto]">
             <div class="blog-nav mr-10">
                 <div class="blog-nav-button">
@@ -71,10 +60,22 @@
                 {% partial 'menu' %}
             </div>
             <div class="catalog__wrapper max-w-[1096px]">
-
+                <form
+                    class="flex justify-start items-center text-2xl mb-14 mr-9 max-sm:flex-col max-sm:mb-8 max-sm:items-start"
+                    action="" method="post">
+<!--                    <label class="mr-16 font-inter max-smtwo:mr-10 max-sm:mb-5" for="sorting">Сортировать:</label>-->
+                    <select
+                        class="_shopaholic-sorting w-[270px] border border-brown rounded-md p-4 max-smtwo:w-[200px] bg-right-1 text-text-gray/50 text-2xl  hover:text-brown focus:text-brown focus:ring-brown focus:border-brown"
+                        name="sorting" id="sorting">
+                        <option value="price|asc">По алфавиту</option>
+                        <option value="price|desc">По цене</option>
+                        <option  value="new">По новизне</option>
+                    </select>
+                </form>
                 {% partial 'catalog/catalog-ajax' %}
-            </div>
-        </div>
-    </div>
-</section>
+
+             </div>
+         </div>
+     </div>
+ </section>
 

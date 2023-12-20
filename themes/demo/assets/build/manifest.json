@@ -1,6 +1,6 @@
 {
   "src/css/index.css": {
-    "file": "assets/index-5f0fba79.css",
+    "file": "assets/index-8c4dfbac.css",
     "isEntry": true,
     "src": "src/css/index.css"
   },
@@ -233,12 +233,12 @@
     "src": "src/fonts/Pollock1c.woff"
   },
   "src/js/commerce.js": {
-    "file": "assets/commerce-59691cc7.js",
+    "file": "assets/commerce-f6888586.js",
     "isEntry": true,
     "src": "src/js/commerce.js"
   },
   "src/js/index.js": {
-    "file": "assets/css-4459192c.js",
+    "file": "assets/css-1671afad.js",
     "isEntry": true,
     "src": "src/js/index.js"
   },

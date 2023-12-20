@@ -212,7 +212,7 @@ document.querySelectorAll('nav .menu-item li').forEach(item => {
         if (!imgElement.dataset.originalSrc) { // Сохраняем исходный src, если он еще не сохранен
             imgElement.dataset.originalSrc = imgElement.src;
         }
-        imgElement.src = '/themes/demo/assets/images/icon4.png';
+        imgElement.src = '/themes/demo/assets/images/arrowmenu.svg';
         item.classList.add('active');
     });
 
@@ -272,3 +272,26 @@ const modal = document.getElementById('modal');
 //         modal.showModal();
 //     });
 // });
+document.querySelectorAll('.show-phone-number-button').forEach(button => {
+    button.addEventListener('click', function() {
+        this.previousElementSibling.classList.toggle('hidden-phone-number');
+        this.style.display = 'none'; // Скрывает кнопку после нажатия
+
+    });
+});
+const c = document.querySelector('.containerPagination')
+const indexs = Array.from(document.querySelectorAll('.index'))
+let cur = -1
+indexs.forEach((index, i) => {
+    index.addEventListener('mouseover', (e) => {
+        // clear
+        c.className = 'containerPagination'
+        void c.offsetWidth; // Reflow
+        c.classList.add('open')
+        c.classList.add(`i${i + 1}`)
+        if (cur > i) {
+            c.classList.add('flip')
+        }
+        cur = i
+    })
+})

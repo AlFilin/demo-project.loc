@@ -11,31 +11,32 @@
         {% partial 'menu' %}
       </div>
       <div class="max-w-[1096px]">
-        <ul
-          class="grid grid-cols-3 gap-32 mb-20 text-2xl text-brown max-2xl:gap-20 max-xl:gap-10 max-md:grid-cols-2 max-lg:justify-items-center max-smtwo:mb-7 max-mini:text-lg">
+          <div class=" catalog-list grid grid-cols-3 gap-10 sm:gap-10 md:gap-20 2xl:gap-20 mb-20 text-2xl text-brown
+max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg ">
           {% if obProductList is not empty %}
           {% for obProduct in obProductList %}
           {% set obOffer = obProduct.offer.first() %}
           {% partial 'product-card' %}
           {% endfor %}
-        </ul>
+        </div>
         {% else %}
         <p>В данной категории нет товаров</p>
         {% endif %}
-        {% partial 'pagination' iCount=iCount iPage=iPage %}
+
         <div class="flex justify-between max-xl:justify-evenly max-smtwo:flex-col max-smtwo:items-center">
-          <a href=""
-            class="mb-4 text-xl font-inter text-white px-5 pt-3 bg-button rounded-[10px] border max-smtwo:p-3 max-smtwo:text-lg hover:border-brown hover:underline hover:duration-300">Показать
+          <a href="http://demo-project.loc/catalog/populyarnoe#catalog" title="Популярные товары"
+            class="mb-4 text-xl font-inter text-white px-5 pt-3 bg-button rounded-[10px] border max-smtwo:p-3
+            max-smtwo:text-lg hover:border-brown hover:underline hover:duration-300 pb-[15px]">Показать
             все
             товары категории</a>
-          <div>
-            <button class="mr-5 rounded-full hover:bg-white hover:duration-300">
-              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера1.svg" alt="button">
-            </button>
-            <button class="rounded-full hover:bg-white hover:duration-300">
-              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера2.svg" alt="button">
-            </button>
-          </div>
+<!--          <div>-->
+<!--            <button class="mr-5 rounded-full hover:bg-white hover:duration-300">-->
+<!--              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера1.svg" alt="button">-->
+<!--            </button>-->
+<!--            <button class="rounded-full hover:bg-white hover:duration-300">-->
+<!--              <img class=" max-smtwo:max-w-[40px]" src="/themes/demo/assets/images/Кнопкаслайдера2.svg" alt="button">-->
+<!--            </button>-->
+<!--          </div>-->
         </div>
       </div>
     </div>

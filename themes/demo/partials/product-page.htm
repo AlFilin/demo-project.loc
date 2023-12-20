@@ -19,7 +19,7 @@
               <div class="swiper-wrapper">
                 {% for slide in obProduct.images %}
                 <div class="swiper-slide swiper-clide-1">
-                  <img class="h-full w-full object-cover" src="{{slide.path}}" alt="{{slide.title}}">
+                  <img class="h-full w-full object-cover  " src="{{slide.path}}" alt="{{slide.title}}">
                 </div>
                 {% endfor %}
               </div>
@@ -178,11 +178,20 @@
             <ul class="swiper-wrapper flex">
               {% for obProduct in relatedProducts %}
               {% set obOffer = obProduct.offer.first() %}
+              {% if obOffer.price > 0 %}
               <li
                 class="swiper-slide max-w-[280px] mx-5 p-5 bg-white rounded-lg shadow-card bg-300% hover:shadow-light-black hover:duration-700"
                 style="background-image: url(/themes/demo/assets/images/brick-wall-painted-white.png);">
                 <a href="/catalog/{{obProduct.category.slug}}/{{obProduct.slug}}#card-product">
-                  <img class="mb-5" src="{{obProduct.preview_image.path}}" alt="{{obProduct.name}}">
+                    {% if obProduct.preview_image.path is not empty %}
+                    <img class="mb-5 rounded-lg" src="{{obProduct.preview_image.path}}" alt="{{obProduct.name}}">
+                    {% else %}
+                    <img class="mb-5 rounded-lg" src="/themes/demo/assets/images/nophoto.jpg" alt="{{obProduct.name}}">
+                    {% endif %}
+
+
+
+
                   <div>
                     <p class="mb-2">{{obProduct.name}}</p>
                     <p class="mb-5">{{obOffer.price}} ₽</p>
@@ -211,6 +220,7 @@
                   </div>
                 </a>
               </li>
+                {% endif  %}
               {% endfor %}
             </ul>
           </div>

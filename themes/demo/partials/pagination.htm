@@ -1,10 +1,72 @@
 {% set arPaginationList = Pagination.get(iPage, iCount) %}
-
+{% if arPaginationList is not empty  %}
+<div class="containerPagination">
 {# Render pagination buttons #}
 {% if arPaginationList is not empty %}
+
+
+
+<!--    {% if iPage != 1 %}-->
+<!--    <a href="{{ url_current() ~ '?page=' ~ (iPage - 1) }}" class="pagination__btn pagination__btn_prev {{ linkClass }}"-->
+<!--       data-page="{{ iPage - 1 }}" aria-label="Go to previous page">-->
+<!--        <svg class="pagination__icon" xmlns="http://www.w3.org/2000/svg"-->
+<!--             xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--             width="24" height="10" viewBox="0 0 24 10" aria-hidden="true" fill="#000000">-->
+<!--            <defs>-->
+<!--                <path id="r2ufa" d="M1193.34 457.4v-1.31h20.88v1.31z"/>-->
+<!--                <path id="r2ufb" d="M1211.85 452.004l4.337 4.637-.867.927-4.337-4.636z"/>-->
+<!--                <path id="r2ufc" d="M1215.218 456.103l-4.082 4.91.816.981 4.082-4.91z"/>-->
+<!--            </defs>-->
+<!--            <g>-->
+<!--                <g transform="translate(-1193 -452)">-->
+<!--                    <g>-->
+<!--                        <use xlink:href="#r2ufa"/>-->
+<!--                    </g>-->
+<!--                    <g>-->
+<!--                        <use xlink:href="#r2ufb"/>-->
+<!--                    </g>-->
+<!--                    <g>-->
+<!--                        <use xlink:href="#r2ufc"/>-->
+<!--                    </g>-->
+<!--                </g>-->
+<!--            </g>-->
+<!--        </svg>-->
+<!--    </a>-->
+<!--    {% endif %}-->
+    <ul class="pagination__list flex">
 {% for arPagination in arPaginationList %}
-<a href="{{ url_current() }}?page={{ arPagination.value }}#catalog" class="{{ arPagination.class }}" data-code="{{ arPagination.code }}">
-    {{ arPagination.name }}
-</a>
+
+        <li class="pagination__item  ">
+            <a class="paginationSpan pagination__link "
+               {% if arPagination.value != iPage %}
+               href="{{ url_current() ~ '?page=' ~ arPagination.value }}"
+               {% endif %}
+               class="{{ arPagination.class }}"
+               data-code="{{ arPagination.code }}"
+               data-page="{{ arPagination.value }}"
+               >
+                <div class="index">
+                    {{ arPagination.name }}
+                </div>
+            </a>
+        </li>
+
+
 {% endfor %}
+
+    </ul>
+
+
 {% endif %}
+    <svg viewBox="0 0 100 100">
+        <path fill="#361F0F"
+              d="m 7.1428558,49.999998 c -1e-7,-23.669348 19.1877962,-42.8571447 42.8571442,-42.8571446 23.669347,0 42.857144,19.1877966 42.857144,42.8571446" />
+    </svg>
+    <svg viewBox="0 0 100 100">
+        <path fill="#361F0F"
+              d="m 7.1428558,49.999998 c -1e-7,23.669347 19.1877962,42.857144 42.8571442,42.857144 23.669347,0 42.857144,-19.187797 42.857144,-42.857144" />
+    </svg>
+
+</div>
+{% endif %}
+
