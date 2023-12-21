@@ -11,11 +11,13 @@
 
 <section class="max-w-site m-0 m-auto mx-5  _shopaholic-order-form needs-validation _ajax_create_order" id="cart"
   data-request="onSubmit" data-request-validated aria-labelledby="cart-order-info" role="group">
-  <form action="" id="orderForm" class="_shopaholic-order-form needs-validation _ajax_create_order pb-20">
+  <form data-request="{{ genericForm }}::onFormSubmit" action="" id="orderForm" class="_shopaholic-order-form needs-validation _ajax_create_order pb-20">
+        {{ form_token() }}
+    <div id="{{ genericForm }}_forms_flash"></div>
     <div class="max-w-block m-0 m-auto font-futura pt-32 pb-20 pl-20 max-1.5xl:pl-0 max-lg:pt-10 max-lg:pb-10
    cart cart__order cart__section">
 
-      <div class="grid grid-cols-[300px_auto] items-center mb-20 max-mdtwo:grid-cols-1 max-mdtwo:items-start">
+      <div class="grid grid-cols-[300px_auto] items-center mb-10 max-mdtwo:grid-cols-1 max-mdtwo:items-start">
         <h2 class="mb-5 max-mdtwo:mb-0 mr-16 text-5xl font-inter font-medium max-xl:text-4xl">Корзина</h2>
         <span class="h-2 bg-brown w-full max-mdtwo:mb-5 max-mdtwo:h-1"></span>
         {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs %}
@@ -31,14 +33,21 @@
             data-position-id="{{ obProductCartPosition.id }}" data-offer-id="{{ obOffer.id }}"
             data-offer_id="{{ obOffer.id }}">
             <div class="flex">
-              <img class="max-h-[160px] mr-10 max-minitwo:mr-3" src="{{obProduct.preview_image.path}}"
-                alt="{{obProduct.name}}">
-              <div>
+
+                {% set img = obProduct.preview_image.path %}
+                {% set alt = obProduct.name %}
+
+                {% partial 'helpers/image'
+                src = obProduct.preview_image.path
+                mobSrc = obProduct.preview_image.path
+                width = 160 height = 160
+                mobWidth = 160 mobHeight = 160
+                alt = obProduct.name
+                class="max-h-[160px] mr-10 max-minitwo:mr-3"
+                %}
+
+              <div class="flex flex-col justify-between max-minitwo:ml-3">
                 <h2 class="text-2xl font-light text-blue mb-3">{{obProduct.name}}</h2>
-                <div class="flex items-end mb-7 max-minitwo:mb-3">
-                  <p class="text-base font-light text-light-grey-blue mr-4">Цвет:</p>
-                  <p class="text-xl font-light text-blue">Белый</p>
-                </div>
                 <div class="flex max-sm:flex-col max-sm:items-start">
                   <div class="quantity mr-6 max-sm:mb-2 max-sm:mr-0 cart-product__quantity">
                     <button class="quantity-btn quantity-btn-minus ml-4 cart-product__change-btn
@@ -117,8 +126,8 @@
                   от <span class="font-bold">30.000
                     рублей</span></button>
               </a>
-              <button class="text-white py-3 w-full text-2xl max-lg:text-xl max-lg:w-1/3 max-md:w-2/3 max-sm:text-xl bg-button border rounded-md font-light
-            hover:border-brown hover:underline hover:duration-300" id="addOrder" type="button">
+              <button id="simpleContactSubmitButton" type="submit" class="text-white py-3 w-full text-2xl max-lg:text-xl max-lg:w-1/3 max-md:w-2/3 max-sm:text-xl bg-button border rounded-md font-light
+            hover:border-brown hover:underline hover:duration-300" id="addOrder">
                 Оформить
                 заказ</button>
             </div>
@@ -137,32 +146,32 @@
         class="grid grid-cols-2 max-w-[1056px] gap-12 max-smtwo:grid-cols-1 max-mdtwo:gap-5 max-smtwo:gap-5">
         <input type="text" name="name" id="name"
           class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Имя" required
+          placeholder="Имя"
           style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
         <input type="text" name="surname" id="surname"
           class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Отчество" required
+          placeholder="Отчество"
           style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
         <input type="text" name="lastname" id="lastname"
           class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Фамилия" required
+          placeholder="Фамилия"
           style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
         <input type="text" name="phone" id="phone"
           class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Телефон" required
+          placeholder="Телефон"
           style="background-image: url(/themes/demo/assets/images/tele.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
         <input type="text" name="email" id="email"
           class="mr-7 border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Email" required
+          placeholder="Email"
           style="background-image: url(/themes/demo/assets/images/email.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
         <input type="text" name="address" id="address"
           class="border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"
-          placeholder="Адрес" required
+          placeholder="Адрес"
           style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
         <textarea name="text"
           class="col-span-2 h-44 max-smtwo:col-span-1 resize-none border text-2xl max-minitwo:text-lg border-brown rounded-sm focus:ring-brown-header focus:border-brown-header w-full p-4"

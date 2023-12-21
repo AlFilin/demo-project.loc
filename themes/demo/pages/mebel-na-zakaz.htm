@@ -1,5 +1,27 @@
-title = "Мебель на заказ"
 url = "/custom-furniturel"
 layout = "home"
+title = "Мебель на заказ"
+
+[genericForm]
+rules[name] = "required"
+rules[surname] = "required"
+rules[lastname] = "required"
+rules[address] = "required"
+rules[phone] = "required"
+rules[email] = "required"
+rules_messages[required] = "Вы не заполнили поле"
+messages_success = "Ваша форма была успешно отправлена!"
+messages_errors = "В вашей заявке содержатся ошибки."
+mail_enabled = 1
+mail_subject = "Письмо с сайта Сев Мебель"
+reset_form = 1
+redirect = "/thanks"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
 {% ajaxPartial 'custom-furniturel' %}

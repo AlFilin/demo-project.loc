@@ -23,17 +23,21 @@ emails_date_format = "Y-m-d"
   <div class="max-w-container m-0 m-auto">
     <div class="max-w-block m-0 m-auto font-futura text-2xl mx-5 max-1.5lg:text-xl">
       <div
-        class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5 max-sm:py-3">
+        class="relative flex max-mdtwo:grid grid-cols-2 items-center justify-between py-10 max-mdtwo:py-5">
         <div class="burder-logo">
           <div class="menu-burger__header max-lg:self-center">
             <span></span>
           </div>
             <a href="/" title="Главная">
-                <img class="hidden max-mdtwo:block max-md:justify-self-start max-sm:hidden ml-5"
-                     src="/themes/demo/assets/images/logonew.svg" alt="Логотип компании СевМебель">
+                {% partial 'helpers/image'
+                    src = "/themes/demo/assets/images/logonew.svg"
+                    mobSrc = "/themes/demo/assets/images/logonew.svg"
+                    width = 240 height = 70
+                    mobWidth = 190 mobHeight = 56
+                    alt = "Логотип компании СевМебель" class="hidden max-mdtwo:block max-md:justify-self-start max-sm:hidden ml-5"
+                    %}
 <!--                <img class="hidden max-sm:block w-30 ml-5" src="/themes/demo/assets/images/logonew.svg" alt="Логотип Лофт Мебель">-->
             </a>
-
         </div>
           <ul class="header-list flex max-w-[750px]">
             <img class="hidden max-mdtwo:block w-40 mb-3" src="/themes/demo/assets/images/logonew.svg" alt="Логотип Лофт Мебель маленький"
@@ -45,7 +49,7 @@ emails_date_format = "Y-m-d"
               <a href="/catalog#catalog">Каталог</a>
             </li>
             <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
-              <a href="/custom-furniturel">Мебель на заказ</a>
+              <a href="/custom-furniturel#custom-furniturel">Мебель на заказ</a>
             </li>
             <li class="header-list__item pr-14 max-1.5lg:pr-10 hover:text-white hover:duration-300">
               <a href="/kontakts#kontakts">Контакты</a>
@@ -93,8 +97,14 @@ emails_date_format = "Y-m-d"
         <div
           class="flex flex-col justify-between text-center h-[692px] top-0 right-[417px] absolute bg-brown max-2xl:-right-5 max-mdtwo:hidden">
           <a href="/" class="mt-7">
-            <img src="/themes/demo/assets/images/logonew.svg" alt="Логотип компании СевМебель" style="display:block; margin: auto;">
-          </a>
+            {% partial 'helpers/image'
+            src = "/themes/demo/assets/images/logonew.svg"
+            mobSrc = "/themes/demo/assets/images/logonew.svg"
+            width = 240 height = 70
+            mobWidth = 190 mobHeight = 56
+            alt = "Логотип компании СевМебель" class="block m-auto"
+            %}
+                  </a>
           <div class="flex flex-col mx-8 mb-16 text-white font-bold text-xl">
             <a class="py-3 px-4 mb-8 border border-white hover:text-brown hover:bg-white hover:duration-500"
               href="tel:+7 (999) 241-11-11">+7 (999) 241-11-11</a>
@@ -112,11 +122,11 @@ emails_date_format = "Y-m-d"
   <div class="fonheader m-0 m-auto font-futura text-2xl"
     style="background-image: url(/themes/demo/assets/images/fonright.png);">
     <div class="max-w-container m-0 m-auto max-1.5xl:mr-64 max-mdtwo:mr-0">
-      <div class="max-w-block h-[562px] m-0 m-auto mx-5 max-2xl:flex items-center">
+      <div class="max-w-block h-[562px] m-0 m-auto mx-5 max-2xl:flex items-center max-mdtwo:items-start">
         <div
           class="flex justify-between max-2xl:w-full max-2xl:grid max-2xl:grid-cols-[880px_auto] max-1.5xl:items-center max-1.5xl:grid-cols-1">
           <div
-            class="relative text-center mt-24 pt-14 px-24 max-2xl:mt-0 max-1.5xl:w-max max-1.5xl:justify-self-center max-1.5xl:mb-20 max-md:px-10 max-smtwo:px-5 max-sm:px-0 max-minitwo:px-10">
+            class="relative text-center mt-24 mr-5 max-1.5xl:mr-0 pt-14 px-24 max-2xl:mt-0 max-1.5xl:w-max max-1.5xl:justify-self-center max-1.5xl:mb-20 max-1.5xl:mt-10 max-mdtwo:mb-10 max-md:px-10 max-smtwo:px-5 max-sm:px-0 max-minitwo:px-10">
             <img class="absolute top-0 right-0 max-md:w-40 max-smtwo:w-32"
               src="/themes/demo/assets/images/Рамкаверх.png" alt="рамка">
             <h1
@@ -134,9 +144,9 @@ emails_date_format = "Y-m-d"
           </div>
           <div
             class="max-w-[550px] max-2xl:mr-56 max-2xl:justify-self-end max-1.5xl:mr-0 max-1.5xl:justify-self-start max-1.5xl:ml-20 max-1.5xl:max-w-xl max-xl:ml-10 max-smtwo:ml-7 max-sm:ml-5 max-mini:ml-1">
-            <h2 class="mt-12 mb-10 font-bold text-3xl max-2xl:mt-0 max-smtwo:text-2xl">Мебель на заказ</h2>
+            <h2 class="mt-12 mb-10 font-bold text-3xl max-2xl:mt-0 max-smtwo:text-2xl max-md:mb-5">Мебель на заказ</h2>
             <div
-              class="w-[373px] h-[186px] flex flex-col justify-between max-1.5xl:w-full max-1.5xl:h-auto max-smtwo:text-lg">
+              class="w-[373px] h-[186px] flex flex-col justify-between mr-2 max-1.5xl:w-full max-1.5xl:h-auto max-smtwo:text-lg">
               <p class="max-1.5xl:mr-10">Подберем решение для Вашего офиса, квартиры и дома.</p>
               <p>Учтём все пожелания и выполним заказ в срок 30
                 календарных дней с гарантией 12 месяцев</p>

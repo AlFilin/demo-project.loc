@@ -82,6 +82,7 @@ const swiperbanner = new Swiper('.swiper-foto-prod', {
 });
 
 const swipercard = new Swiper('.swiper-card', {
+    autoHeight: true,
     slidesPerView: 5,
     loop: true,
     spaseBetween: 30,
@@ -94,18 +95,20 @@ const swipercard = new Swiper('.swiper-card', {
         360: {
             slidesPerView: 1,
             spaseBetween: 0,
+            centeredSlides: true,
         },
-        480: {
+        540: {
             slidesPerView: 2,
             spaseBetween: 30,
+            centeredSlides: false,
         },
-        770: {
+        650: {
             slidesPerView: 3,
             centeredSlides: true,
             spaseBetween: 30,
         },
         1280: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaseBetween: 30,
         }
     }

@@ -1,34 +1,55 @@
 <article
-    class="productCard lazyload p-5 bg-white rounded-lg shadow-card bg-300% max-mini:max-w-[170px] hover:shadow-light-black hover:duration-700"
-    data-bg="/themes/demo/assets/images/brick-wall-painted-white.png">
-    <a href="/catalog/{{obProduct.category.slug}}/{{obProduct.slug}}#card-product">
-        {% if obProduct.preview_image.path is not empty %}
-        <img class="mb-5 rounded-lg" src="{{obProduct.preview_image.path}}" alt="{{obProduct.name}}">
-        {% else %}
-        <img class="mb-5 rounded-lg" src="/themes/demo/assets/images/nophoto.jpg" alt="{{obProduct.name}}">
-        {% endif %}
-        <div>
-            <h3 class="mb-2">{{obProduct.name}}</h3>
-            <p class="mb-5">{{obOffer.price}} ₽</p>
-            <div>
-                <ul class="flex">
-                    <li class="mr-5 max-mini:mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                            <circle cx="15" cy="15" r="15" fill="#D2BA94" />
-                        </svg>
-                    </li>
-                    <li class="mr-5 max-mini:mr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                            <circle cx="15" cy="15" r="15" fill="#776D63" />
-                        </svg>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                            <circle cx="15" cy="15" r="15" fill="#8C6034" />
-                        </svg>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </a>
+  class="productCard lazyload p-5 bg-white rounded-lg shadow-card bg-300% hover:shadow-light-black hover:duration-700"
+  data-bg="/themes/demo/assets/images/brick-wall-painted-white.png">
+  <a href="/catalog/{{obProduct.category.slug}}/{{obProduct.slug}}#card-product">
+    {% if obProduct.preview_image.path is not empty %}
+
+    {% set img = obProduct.preview_image.path %}
+    {% set alt = obProduct.name %}
+
+    {% partial 'helpers/image'
+    src = obProduct.preview_image.path
+    mobSrc = obProduct.preview_image.path
+    width = 243 height = 243
+    mobWidth = 243 mobHeight = 243
+    alt = obProduct.name
+    class="mb-5 rounded-lg max-smtwo:max-h-40 max-minitwo:max-h-none"
+    %}
+
+    {% else %}
+
+    {% partial 'helpers/image'
+    src = "/themes/demo/assets/images/nophoto.jpg"
+    mobSrc = "/themes/demo/assets/images/nophoto.jpg"
+    width = 243 height = 243
+    mobWidth = 243 mobHeight = 243
+    alt = obProduct.name
+    class="mb-5 rounded-lg max-smtwo:max-h-40 max-minitwo:max-h-none"
+    %}
+
+    {% endif %}
+    <div>
+        <h3 class="mb-2 max-smtwo:text-xl">{{obProduct.name}}</h3>
+        <p class="mb-5 max-smtwo:text-lg">{{obOffer.price}} ₽</p>
+      <div>
+        <ul class="flex">
+          <li class="mr-5 max-mini:mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <circle cx="15" cy="15" r="15" fill="#D2BA94" />
+            </svg>
+          </li>
+          <li class="mr-5 max-mini:mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <circle cx="15" cy="15" r="15" fill="#776D63" />
+            </svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+              <circle cx="15" cy="15" r="15" fill="#8C6034" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </a>
 </article>

@@ -6,13 +6,13 @@
       <span class="h-2 bg-brown w-full max-smtwo:h-1"></span>
     </div>
     <div
-      class="grid grid-cols-[400px_auto] justify-between max-lg:grid-cols-1 max-1.5lg:grid-cols-[330px_auto]">
+      class="grid grid-cols-[450px_auto] max-xl:grid-cols-[400px_auto] max-lg:grid-cols-1">
       <div class="blog-nav mr-10 max-lg:mr-0">
         {% partial 'menu' %}
       </div>
       <div class="max-w-[1096px]">
-          <div class=" catalog-list grid grid-cols-3 gap-10 sm:gap-10 md:gap-20 2xl:gap-20 mb-20 text-2xl text-brown
-max-md:grid-cols-2 max-lg:justify-items-center max-sm:gap-3 max-smtwo:mb-7 max-mini:text-lg ">
+          <div class="catalog-list grid grid-cols-3 gap-10 max-1.5lg:grid-cols-2 max-lg:grid-cols-3 max-mdtwo:gap-5 mb-20 text-2xl text-brown
+max-md:grid-cols-2 max-lg:justify-items-center max-smtwo:mb-7 max-minitwo:grid-cols-1 max-mini:text-lg ">
           {% if obProductList is not empty %}
           {% for obProduct in obProductList %}
           {% set obOffer = obProduct.offer.first() %}

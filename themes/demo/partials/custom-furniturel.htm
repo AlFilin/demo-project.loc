@@ -1,11 +1,11 @@
 {% set arBreadcrumbs = [
 {'active': true, 'name': 'Мебель на заказ' }
 ] %}
-<section class="max-w-site m-0 m-auto mx-5" id="faq">
-  <div class="max-w-block m-0 m-auto font-futura text-xl pt-32 pb-20">
+<section class="max-w-site m-0 m-auto mx-5" id="custom-furniturel">
+  <div class="max-w-block m-0 m-auto font-futura text-xl pt-10 pb-20">
     <div class="grid grid-cols-[450px_auto] items-center mb-20 max-lg:grid-cols-1">
-      <h2 class="mb-5 text-5xl font-inter font-medium max-lg:w-full max-md:text-3xl">Мебель на заказ</h2>
-      <span class="max-mdtwo:mb-5 h-2 bg-brown max-lg:w-full"></span>
+      <h2 class="mb-5 text-5xl font-inter font-medium max-lg:w-full max-lg:text-4xl max-md:text-3xl">Мебель на заказ</h2>
+      <span class="max-lg:mb-5 h-2 bg-brown max-lg:w-full"></span>
       {% partial 'breadcrums' wrapperClass='catalog__breadcrumbs' arBreadcrumbs=arBreadcrumbs %}
     </div>
     <div class="rounded-2xl bg-gradient-to-r max-xl:bg-gradient-to-b from-brown-header/20 via-brown-header/80 to-brown">
@@ -52,42 +52,44 @@
               которое будет отражать вашу индивидуальность.</p>
           </li>
         </ul>
-        <form
+        <form data-request="{{ genericForm }}::onFormSubmit"
           class="grid grid-cols-1 gap-5 max-w-md max-xl:grid-cols-3 max-xl:max-w-none max-xl:w-full max-md:grid-cols-2 max-smtwo:grid-cols-1">
+              {{ form_token() }}
+              <div id="{{ genericForm }}_forms_flash"></div>
           <input type="text" name="name" id="name"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Имя" required
+            placeholder="Имя"
             style="background-image: url(/themes/demo/assets/images/corzina-icon.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
           <input type="text" name="surname" id="surname"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Отчество" required
+            placeholder="Отчество"
             style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
           <input type="text" name="lastname" id="middlename"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Фамилия" required
+            placeholder="Фамилия"
             style="background-image: url(/themes/demo/assets/images/corzina-icon2.svg); background-repeat: no-repeat; background-position: right 28px center;">
 
           <input type="text" name="phone" id="phone"
             class="mr-7 border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Телефон" required
+            placeholder="Телефон"
             style="background-image: url(/themes/demo/assets/images/tele.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
           <input type="text" name="email" id="email"
             class="mr-7 border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Email" required
+            placeholder="Email"
             style="background-image: url(/themes/demo/assets/images/email.svg); background-repeat: no-repeat; background-position: right 28px center; background-size: 30px;">
 
           <input type="text" name="address" id="address"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
-            placeholder="Адрес" required
+            placeholder="Адрес"
             style="background-image: url(/themes/demo/assets/images/corzina-icon3.svg); background-repeat: no-repeat; background-position: right 28px center;">
           <textarea name="text"
             class="max-xl:col-span-2 max-smtwo:col-span-1 resize-none border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
             placeholder="Комментарий к заказу"></textarea>
-          <button class="text-white py-3 w-full text-2xl max-lg:text-xl max-md:col-start-2 max-smtwo:col-start-1 border-2 border-brown rounded-md
-          hover:bg-gray-600/50 hover:rounded-3xl hover:underline duration-500" id="addOrder" type="button">
+          <button  id="simpleContactSubmitButton" type="submit" class="bg-white/70 py-3 w-full text-2xl max-lg:text-xl max-md:col-start-2 max-smtwo:col-start-1 border-2 border-brown rounded-md
+          hover:bg-gray-600/50 hover:rounded-3xl hover:text-white hover:underline duration-500" id="addOrder">
             Оформить
             заказ</button>
         </form>
