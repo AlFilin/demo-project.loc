@@ -55,7 +55,7 @@
         <form data-request="{{ genericForm }}::onFormSubmit"
           class="grid grid-cols-1 gap-5 max-w-md max-xl:grid-cols-3 max-xl:max-w-none max-xl:w-full max-md:grid-cols-2 max-smtwo:grid-cols-1">
               {{ form_token() }}
-              <div id="{{ genericForm }}_forms_flash"></div>
+              <div class="hidden" id="{{ genericForm }}_forms_flash"></div>
           <input type="text" name="name" id="name"
             class="border text-lg h-20 rounded-2xl border-brown focus:ring-brown-header focus:border-brown-header w-full p-4"
             placeholder="Имя"
