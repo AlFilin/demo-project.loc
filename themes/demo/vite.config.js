@@ -9,6 +9,7 @@ const input = {
     commerce: resolve(__dirname, 'src/js/commerce.js'),
     order: resolve(__dirname, 'src/js/order.js'),
     search: resolve(__dirname, 'src/js/search.js'),
+    swiper: resolve(__dirname, 'src/js/swiper.js'),
 }
 
 // Auto detect the theme name, works only if one theme is available.

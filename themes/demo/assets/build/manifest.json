@@ -1,6 +1,6 @@
 {
   "src/css/index.css": {
-    "file": "assets/index-8c4dfbac.css",
+    "file": "assets/index-d6c9c232.css",
     "isEntry": true,
     "src": "src/css/index.css"
   },
@@ -238,7 +238,7 @@
     "src": "src/js/commerce.js"
   },
   "src/js/index.js": {
-    "file": "assets/css-1671afad.js",
+    "file": "assets/css-e0697441.js",
     "isEntry": true,
     "src": "src/js/index.js"
   },
@@ -251,5 +251,17 @@
     "file": "assets/search-e3bc4025.js",
     "isEntry": true,
     "src": "src/js/search.js"
+  },
+  "src/js/swiper.css": {
+    "file": "assets/swiper-d66ac298.css",
+    "src": "src/js/swiper.css"
+  },
+  "src/js/swiper.js": {
+    "css": [
+      "assets/swiper-d66ac298.css"
+    ],
+    "file": "assets/swiper-88bbe052.js",
+    "isEntry": true,
+    "src": "src/js/swiper.js"
   }
 }

@@ -4,6 +4,10 @@
 {'slug': obProduct.category.getPageUrl('catalog'), 'name': obProduct.category.name},
 {'active': true, 'name': obProduct.name}
 ] %}
+{% set arSEOParams = {'obProduct': obProduct} %}
+{% put seo_tags %}
+{% component 'SeoToolbox' model=obProduct params=arSEOParams %}
+{% endput %}
 <section class="max-w-site m-0 m-auto" id="card-product">
   <div class="max-w-container m-0 m-auto">
     <div class="pt-10 ml-10">

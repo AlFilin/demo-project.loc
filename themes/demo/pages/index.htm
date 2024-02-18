@@ -9,10 +9,19 @@ sorting = "new"
 
 
 ==
+
+{{ vite([ 'src/js/swiper.js' ]) }}
+
 {% set obCategoryList = CategoryList.make().tree() %}
 {% set obProductList = ProductList.make().active().category(22).take() %}
+{% set obProductListHome = ProductList.make().active().category(21).take() %}
+{% set obProductListStol = ProductList.make().active().category(11).take() %}
+{% set obProductListBar = ProductList.make().active().category(12).take() %}
 
 {% ajaxPartial 'block-1' %}
+{% ajaxPartial 'additional-category-block-1' %}
+{% ajaxPartial 'additional-category-block-2' %}
+{% ajaxPartial 'additional-category-block-3' %}
 
 {% ajaxPartial 'block-2' %}
 

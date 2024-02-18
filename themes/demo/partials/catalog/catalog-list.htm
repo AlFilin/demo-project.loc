@@ -5,7 +5,9 @@ max-md:grid-cols-2 max-lg:justify-items-center max-smtwo:mb-7 max-minitwo:grid-c
     {% if obProductList is not empty %}
     {% for obProduct in obProductList %}
     {% set obOffer = obProduct.offer.first() %}
+    {% if obOffer.price > 0 %}
     {% partial 'product-card' %}
+    {% endif   %}
     {% endfor %}
 </div>
 {% else %}
